@@ -1,9 +1,14 @@
 <html>
 	<head>
-		<title>Brent Rockwell's Individual Assignment</Title>
-		<h1>BrentRockwell.com</h1>
+		<title>Team Octocat Storefront Group Project</Title>
+		<h1>Octocat</h1>
 		<hr>
 		<table class="fixed">
+			<col width="100px"/>
+			<col width="100px"/>
+			<col width="100px"/>
+			<col width="100px"/>
+			<col width="100px"/>
 			<col width="100px"/>
 			<col width="100px"/>
 			<col width="100px"/>
@@ -11,12 +16,15 @@
 			<tr>
 				<td><a href="index.html">Home</a></td>
 				<td><a href="about.html">About</a></td>
-				<td>Survey</td>
-				<td><a href="resume.html">Resume</a></td>
+				<td><a href="search.html">Search</a></td>
+				<td><a href="settings.html">Settings</a></td>
+				<td><a href="faq.html">FAQ</a></td>
+				<td><a href="payment.html">Cart</a></td>
+				<td><a href="login.html">Login</a></td>
+				<td>Register</td>
 			</tr>
 		</table>
 		<hr>
-		<br>
 	</head>
 	<body>
 		<form>
@@ -107,20 +115,22 @@
 			<fieldset>
 				<legend>Login Information</legend>
 				<label for="uname">Username: </label>
-				<input type="text" required placeholder="Username" name="uname"/>
+				<input type="text" required placeholder="Username" name="uname"/><br>
 				<label for="pass">Password: </label>
 				<input type="password" required placeholder="Password" name="pass"/><br>
+				<label for="passconf">Password Confirmation: </label>
+				<input type="password" required placeholder="Re-enter Password" name="passconf"/><br>
 			</fieldset>
 			<br>
 			<fieldset>
 				<legend>Security Information</legend>
 				<label for="mmname">Mothers Maiden Name: </label>
-				<input type="text" required placeholder="Dont Do It" name="mmname"/><br>
+				<input type="text" required placeholder="Don't do it!" name="mmname"/><br>
 				<label for="ssn">Social Security Number: </label>
 				<input type="text" required placeholder="It's a trap!" name="ssn" pattern="{0-9}{0-9}{0-9}-{0-9}{0-9}-{0-9}{0-9}{0-9}{0-9}"/>
 			</fieldset>
 			<br>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Register">
 		</form>
 	</body>
 </html>
