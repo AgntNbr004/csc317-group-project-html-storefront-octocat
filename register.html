@@ -1,135 +1,177 @@
 <html>
-	<head>
-		<title>Team Octocat Storefront Group Project</Title>
-		<h1>Octocat</h1>
-		<table class="fixed">
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<col width="100px"/>
-			<tr>
-				<td><a href="index.html">Home</a></td>
-				<td><a href="about.html">About</a></td>
-				<td><a href="search.html">Search</a></td>
-				<td><a href="settings.html">Settings</a></td>
-				<td><a href="faq.html">FAQ</a></td>
-				<td><a href="payment.html">Cart</a></td>
-				<td><a href="login.html">Login</a></td>
-				<td>Register</td>
-			</tr>
-		</table>
-		<hr>
-	</head>
-	<body>
-		<form>
-			<fieldset>
-				<legend>Personal Information</legend>
-				<label for="fname">First Name: </label>
-				<input type="text" minlength="1" required placeholder="First Name" name="fname"/>
-				<label for="lname">Last Name: </label>
-				<input type="text" minlength="1" required placeholder="Last Name" name="lname"/><br>
-			</fieldset>
+
+<head>
+	<title>Team Octocat Storefront Group Project</Title>
+	<h1>Octocat</h1>
+	<table class="fixed">
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<col width="100px" />
+		<tr>
+			<td><a href="index.html">Home</a></td>
+			<td><a href="about.html">About</a></td>
+			<td><a href="search.html">Search</a></td>
+			<td><a href="settings.html">Settings</a></td>
+			<td><a href="faq.html">FAQ</a></td>
+			<td><a href="payment.html">Cart</a></td>
+			<td><a href="login.html">Login</a></td>
+			<td>Register</td>
+		</tr>
+	</table>
+	<hr>
+</head>
+
+<body>
+	<form>
+		<center>
+			<thead>
+				<h1>Account Registration</h1>
+			</thead>
+		</center>
+		<p>*=Required</p>
+		<fieldset>
+			<legend>Personal Information</legend>
+			<table>
+				<tr>
+					<td><label for="fname">First Name*: </label></td>
+					<td><input type="text" minlength="1" required placeholder="First Name" name="fname" /></td>
+				</tr>
+				<tr>
+					<td><label for="lname">Last Name*: </label></td>
+					<td><input type="text" minlength="1" required placeholder="Last Name" name="lname" /><br></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Contact Information</legend>
+			<table>
+				<tr>
+					<td><label for="email">Email Address*: </label></td>
+					<td><input type="text" minlength="6" required placeholder="Email Address" name="email" /><br></td>
+				</tr>
+				<tr>
+					<td><label for="phone">Phone Number*: </label></td>
+					<td><input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" name="phone" /><br></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Address</legend>
+			<table>
+				<tr>
+					<td><label for="saddr1">Street Address #1*: </label></td>
+					<td><input type="text" required placeholder="Address Line 1" name="saddr1" /><br></td>
+				</tr>
+				<tr>
+					<td><label for="city">City #1*: </label></td>
+					<td><input type="text" placeholder="City 1" name="city" /></td>
+				</tr>
+				<tr>
+					<td><label for="saddr2">Street Address #2: </label></td>
+					<td><input type="text" placeholder="Address Line 2" name="saddr2" /><br></td>
+				</tr>
+				<tr>
+					<td><label for="city">City #2: </label></td>
+					<td><input type="text" placeholder="City 2" name="city2" /></td>
+				</tr>
+				<tr>
+					<td><label for="state">State*: </label></td>
+					<td><input list="states" required placeholder="Select from list" id="state" name="state" />
+						<datalist id="states">
+							<option value="AL">
+							<option value="AK">
+							<option value="AZ">
+							<option value="AR">
+							<option value="CA">
+							<option value="CO">
+							<option value="CT">
+							<option value="DE">
+							<option value="FL">
+							<option value="GA">
+							<option value="HI">
+							<option value="ID">
+							<option value="IL">
+							<option value="IN">
+							<option value="IA">
+							<option value="KS">
+							<option value="KY">
+							<option value="LA">
+							<option value="ME">
+							<option value="MD">
+							<option value="MA">
+							<option value="MI">
+							<option value="MN">
+							<option value="MS">
+							<option value="MO">
+							<option value="MT">
+							<option value="NE">
+							<option value="NV">
+							<option value="NH">
+							<option value="NJ">
+							<option value="NM">
+							<option value="NY">
+							<option value="NC">
+							<option value="ND">
+							<option value="OH">
+							<option value="OK">
+							<option value="OR">
+							<option value="PA">
+							<option value="RI">
+							<option value="SC">
+							<option value="SD">
+							<option value="TN">
+							<option value="TX">
+							<option value="UT">
+							<option value="VT">
+							<option value="VA">
+							<option value="WA">
+							<option value="WV">
+							<option value="WI">
+							<option value="WY">
+						</datalist>
+			</td>
+				</tr>
+				<tr>
+					<td><label for="zipcode">Zip code*: </label></td>
+					<td><input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" ame="zip code" /><br></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Login Information</legend>
+			<table>
+				<tr>
+					<td><label for="uname">Username*: </label></td>
+					<td><input type="text" required placeholder="Username" name="uname" /><br></td>
+				</tr>
+				<tr>
+					<td><label for="pass">Password*: </label></td>
+					<td><input type="password" required placeholder="Password" name="pass" /><br></td>
+				</tr>
+				<tr>
+					<td><label for="passconf">Confirm Password*: </label></td>
+					<td><input type="password" required placeholder="Re-enter Password" name="passconf" /><br></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset>
+			<input type="checkbox" required >By checking this box and clicking Submit, I hereby agree to their <a href=#>Privacy Policy</a> and the <a href=#>Terms of Use</a>*</input>
 			<br>
-			<fieldset>
-				<legend>Contact Information</legend>
-				<label for="email">Email Address: </label>
-				<input type="text" minlength="6" required placeholder="Email Address" name="email"/><br>
-				<label for="phone">Phone Number: </label>
-				<input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" name="phone"/><br>
-			</fieldset>
-			<br>
-			<fieldset>
-				<legend>Address</legend>
-				<label for="saddr1">Street Address #1: </label>
-				<input type="text" required placeholder="Address Line 1" name="saddr1"/><br>
-				<label for="saddr2">Street Address #2: </label>
-				<input type="text" required placeholder="Address Line 2" name="saddr2"/><br>
-				<label for="city">City: </label>
-				<input type="text" required placeholder="City" name="city"/>
-				
-				<label for="state">State: </label>
-				<input list="states" required placeholder="Select from list" id="state" name="state" />
-				<datalist id="states">
-					<option value="AL">
-					<option value="AK">
-					<option value="AZ">
-					<option value="AR">
-					<option value="CA">
-					<option value="CO">
-					<option value="CT">
-					<option value="DE">
-					<option value="FL">
-					<option value="GA">
-					<option value="HI">
-					<option value="ID">
-					<option value="IL">
-					<option value="IN">
-					<option value="IA">
-					<option value="KS">
-					<option value="KY">
-					<option value="LA">
-					<option value="ME">
-					<option value="MD">
-					<option value="MA">
-					<option value="MI">
-					<option value="MN">
-					<option value="MS">
-					<option value="MO">
-					<option value="MT">
-					<option value="NE">
-					<option value="NV">
-					<option value="NH">
-					<option value="NJ">
-					<option value="NM">
-					<option value="NY">
-					<option value="NC">
-					<option value="ND">
-					<option value="OH">
-					<option value="OK">
-					<option value="OR">
-					<option value="PA">
-					<option value="RI">
-					<option value="SC">
-					<option value="SD">
-					<option value="TN">
-					<option value="TX">
-					<option value="UT">
-					<option value="VT">
-					<option value="VA">
-					<option value="WA">
-					<option value="WV">
-					<option value="WI">
-					<option value="WY">
-				</datalist>
-				
-				<label for="zipcode">Zipcode: </label>
-				<input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" name="zipcode"/><br>
-			</fieldset>
-			<br>
-			<fieldset>
-				<legend>Login Information</legend>
-				<label for="uname">Username: </label>
-				<input type="text" required placeholder="Username" name="uname"/><br>
-				<label for="pass">Password: </label>
-				<input type="password" required placeholder="Password" name="pass"/><br>
-				<label for="passconf">Password Confirmation: </label>
-				<input type="password" required placeholder="Re-enter Password" name="passconf"/><br>
-			</fieldset>
-			<br>
-			<fieldset>
-				<legend>Security Information</legend>
-				<label for="mmname">Mothers Maiden Name: </label>
-				<input type="text" required placeholder="Don't do it!" name="mmname"/><br>
-				<label for="ssn">Social Security Number: </label>
-				<input type="text" required placeholder="It's a trap!" name="ssn" pattern="{0-9}{0-9}{0-9}-{0-9}{0-9}-{0-9}{0-9}{0-9}{0-9}"/>
-			</fieldset>
-			<br>
-			<input type="submit" value="Register">
-		</form>
-	</body>
+			<input type="checkbox">I would also like to recieve promotional emails about product announcements, offers, news and more</input>
+		</fieldset>
+		<br>
+		<input type="submit" value="Register">
+	</form>
+</body>
+
 </html>
