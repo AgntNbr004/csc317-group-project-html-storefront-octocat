@@ -19,6 +19,10 @@ h1{
     font-weight: 500;
 }
 
+h1 b{
+    font-weight: 900;
+}
+
 .header{
     border-radius: 10px;
     margin-top: 10px;
@@ -41,8 +45,10 @@ h1{
     font-size: 45px;
     text-shadow: 0 0 20px;
     background-image: url("./img/homebnr.jpg");
+    background-position-y: 35%;
+    background-position-x: 55%;
     padding: 100px 0 100px 0;
-    background-size: auto;
+    background-size: cover;
 }
 
 .herotx.sub1{
