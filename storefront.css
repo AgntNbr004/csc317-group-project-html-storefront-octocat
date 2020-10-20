@@ -1,8 +1,32 @@
 /*Aiboku*/
 
+html{
+    font-size: 18px;
+}
+
+body{
+   background-image: linear-gradient(#b3caf1,#ffffff);
+}
+
+h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.herotx{
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    padding: 50px 0 50px 0;
+    background-color: rgb(151, 151, 151);
+}
+
 .bodywrap{
+    background-color: rgb(255, 255, 255);
     margin: 0 200px 0 200px;
-    padding: 0 25px 0 20px;
+    padding: 0 25px 0 25px;
     box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 15px -4px lightslategray, -12px 0 15px -4px lightslategray;
-    height: 100%;
+    height: auto;
+    border-radius: 10px;
 }

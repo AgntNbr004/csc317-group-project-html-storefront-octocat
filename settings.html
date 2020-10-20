@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Team Octocat Storefront Group Project</Title>
+		<link rel="stylesheet" href="storefront.css">
 	</head>
 	<body>
 		<div class="header" style="background-color:#e3eeff">
@@ -42,128 +43,131 @@
 			</table>
 			<hr>
 		</div>
-		<h3>General Settings</h3>
-		<label for="theme">Website Theme: </label>
-		<input list="themes" required placeholder="Select from list" id="theme" name="theme" />
-		<datalist id="themes">
-			<option value="Light">
-			<option value="Dark">
-		</datalist><br>
 		<br>
-		<input type="submit" value="Update Preferences">
-		
-		<h3>Account Settings</h3>
-		<form>
-			<fieldset>
-				<legend>Personal Information</legend>
-				<label for="fname">First Name: </label>
-				<input type="text" minlength="1" required placeholder="First Name" name="fname"/>
-				<label for="lname">Last Name: </label>
-				<input type="text" minlength="1" required placeholder="Last Name" name="lname"/><br>
-			</fieldset>
+		<div class="bodywrap">
+			<h3>General Settings</h3>
+			<label for="theme">Website Theme: </label>
+			<input list="themes" required placeholder="Select from list" id="theme" name="theme" />
+			<datalist id="themes">
+				<option value="Light">
+				<option value="Dark">
+			</datalist><br>
 			<br>
-			<fieldset>
-				<legend>Contact Information</legend>
-				<label for="email">Email Address: </label>
-				<input type="text" minlength="6" required placeholder="Email Address" name="email"/><br>
-				<label for="phone">Phone Number: </label>
-				<input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" name="phone"/><br>
-			</fieldset>
+			<input type="submit" value="Update Preferences">
+			
+			<h3>Account Settings</h3>
+			<form>
+				<fieldset>
+					<legend>Personal Information</legend>
+					<label for="fname">First Name: </label>
+					<input type="text" minlength="1" required placeholder="First Name" name="fname"/>
+					<label for="lname">Last Name: </label>
+					<input type="text" minlength="1" required placeholder="Last Name" name="lname"/><br>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Contact Information</legend>
+					<label for="email">Email Address: </label>
+					<input type="text" minlength="6" required placeholder="Email Address" name="email"/><br>
+					<label for="phone">Phone Number: </label>
+					<input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" name="phone"/><br>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Address</legend>
+					<label for="saddr1">Street Address #1: </label>
+					<input type="text" required placeholder="Address Line 1" name="saddr1"/><br>
+					<label for="saddr2">Street Address #2: </label>
+					<input type="text" required placeholder="Address Line 2" name="saddr2"/><br>
+					<label for="city">City: </label>
+					<input type="text" required placeholder="City" name="city"/>
+					<label for="state">State: </label>
+					<input list="states" required placeholder="Select from list" id="state" name="state" />
+					<datalist id="states">
+						<option value="AL">
+						<option value="AK">
+						<option value="AZ">
+						<option value="AR">
+						<option value="CA">
+						<option value="CO">
+						<option value="CT">
+						<option value="DE">
+						<option value="FL">
+						<option value="GA">
+						<option value="HI">
+						<option value="ID">
+						<option value="IL">
+						<option value="IN">
+						<option value="IA">
+						<option value="KS">
+						<option value="KY">
+						<option value="LA">
+						<option value="ME">
+						<option value="MD">
+						<option value="MA">
+						<option value="MI">
+						<option value="MN">
+						<option value="MS">
+						<option value="MO">
+						<option value="MT">
+						<option value="NE">
+						<option value="NV">
+						<option value="NH">
+						<option value="NJ">
+						<option value="NM">
+						<option value="NY">
+						<option value="NC">
+						<option value="ND">
+						<option value="OH">
+						<option value="OK">
+						<option value="OR">
+						<option value="PA">
+						<option value="RI">
+						<option value="SC">
+						<option value="SD">
+						<option value="TN">
+						<option value="TX">
+						<option value="UT">
+						<option value="VT">
+						<option value="VA">
+						<option value="WA">
+						<option value="WV">
+						<option value="WI">
+						<option value="WY">
+					</datalist>
+					<label for="zipcode">Zipcode: </label>
+					<input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" ame="zipcode"/><br>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Login Information</legend>
+					<label for="pass">New Password: </label>
+					<input type="password" required placeholder="Password" name="pass"/><br>
+					<label for="passconf">New Password Confirmation: </label>
+					<input type="password" required placeholder="Re-enter Password" name="passconf"/><br>
+				</fieldset>
+				<br>
+				<table class="fixed">
+					<col width="100px"/>
+					<col width="600px"/>
+					<col width="100px"/>
+					<tr>
+						<td><input type="submit" value="Update Account Information"></td>
+						<td />
+						<td><input type="submit" value="Cancel Account"></td>
+					</tr>
+				</table>
+			</form>
+			
+			<h3>Site Settings</h3>
+			<input type="checkbox" id="unitycompatible" name="unitycompatible" value="Unity">
+			<label for="unitycompatible">Only display assets that are compatible with <b>Unity</b></label><br>
+			<input type="checkbox" id="unrealcompatible" name="unrealcompatible" value="Unreal">
+			<label for="unrealcompatible">Only display assets that are compatible with <b>Unreal</b></label><br>
+			<input type="checkbox" id="cryenginecompatible" name="cryenginecompatible" value="CryEngine">
+			<label for="cryenginecompatible">Only display assets that are compatible with <b>CryEngine</b></label><br>
 			<br>
-			<fieldset>
-				<legend>Address</legend>
-				<label for="saddr1">Street Address #1: </label>
-				<input type="text" required placeholder="Address Line 1" name="saddr1"/><br>
-				<label for="saddr2">Street Address #2: </label>
-				<input type="text" required placeholder="Address Line 2" name="saddr2"/><br>
-				<label for="city">City: </label>
-				<input type="text" required placeholder="City" name="city"/>
-				<label for="state">State: </label>
-				<input list="states" required placeholder="Select from list" id="state" name="state" />
-				<datalist id="states">
-					<option value="AL">
-					<option value="AK">
-					<option value="AZ">
-					<option value="AR">
-					<option value="CA">
-					<option value="CO">
-					<option value="CT">
-					<option value="DE">
-					<option value="FL">
-					<option value="GA">
-					<option value="HI">
-					<option value="ID">
-					<option value="IL">
-					<option value="IN">
-					<option value="IA">
-					<option value="KS">
-					<option value="KY">
-					<option value="LA">
-					<option value="ME">
-					<option value="MD">
-					<option value="MA">
-					<option value="MI">
-					<option value="MN">
-					<option value="MS">
-					<option value="MO">
-					<option value="MT">
-					<option value="NE">
-					<option value="NV">
-					<option value="NH">
-					<option value="NJ">
-					<option value="NM">
-					<option value="NY">
-					<option value="NC">
-					<option value="ND">
-					<option value="OH">
-					<option value="OK">
-					<option value="OR">
-					<option value="PA">
-					<option value="RI">
-					<option value="SC">
-					<option value="SD">
-					<option value="TN">
-					<option value="TX">
-					<option value="UT">
-					<option value="VT">
-					<option value="VA">
-					<option value="WA">
-					<option value="WV">
-					<option value="WI">
-					<option value="WY">
-				</datalist>
-				<label for="zipcode">Zipcode: </label>
-				<input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" ame="zipcode"/><br>
-			</fieldset>
-			<br>
-			<fieldset>
-				<legend>Login Information</legend>
-				<label for="pass">New Password: </label>
-				<input type="password" required placeholder="Password" name="pass"/><br>
-				<label for="passconf">New Password Confirmation: </label>
-				<input type="password" required placeholder="Re-enter Password" name="passconf"/><br>
-			</fieldset>
-			<br>
-			<table class="fixed">
-				<col width="100px"/>
-				<col width="600px"/>
-				<col width="100px"/>
-				<tr>
-					<td><input type="submit" value="Update Account Information"></td>
-					<td />
-					<td><input type="submit" value="Cancel Account"></td>
-				</tr>
-			</table>
-		</form>
-		
-		<h3>Site Settings</h3>
-		<input type="checkbox" id="unitycompatible" name="unitycompatible" value="Unity">
-		<label for="unitycompatible">Only display assets that are compatible with <b>Unity</b></label><br>
-		<input type="checkbox" id="unrealcompatible" name="unrealcompatible" value="Unreal">
-		<label for="unrealcompatible">Only display assets that are compatible with <b>Unreal</b></label><br>
-		<input type="checkbox" id="cryenginecompatible" name="cryenginecompatible" value="CryEngine">
-		<label for="cryenginecompatible">Only display assets that are compatible with <b>CryEngine</b></label><br>
-		<br>
-		<input type="submit" value="Update Site Preferences">
+			<input type="submit" value="Update Site Preferences">
+		</div>
 	</body>
 </html>
