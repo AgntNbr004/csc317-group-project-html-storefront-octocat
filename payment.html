@@ -43,104 +43,106 @@
 			</table>
 			<hr>
 		</div>
-		<div>
-			<h2>Cart : 4 Items</h2>
-			<p><a href="#">Product 1</a> : $15</p>
-			<p><a href="#">Product 2</a> : $2</p>
-			<p><a href="#">Product 3</a> : $2</p>
-			<hr>
-			<p>Total : $19</p>
-		</div>
-		<div>
-			<form>
-				<fieldset>
-					<legend>Payment</legend>
-					<p>Accepted Cards: Visa</p>
-					<label for="name">Name on Card: </label>
-					<input type="text" required placeholder="John Doe" name="name">
-					<label for="cnumber">Card Number: </label>
-                                       	<input type="text" required pattern="^4[0-9]{12}(?:[0-9]{3})?$" placeholder="0123456789012345" name="cnumber">
-					<label for="expdate">Expiration Date: </label>
-                                       	<input type="text" required pattern="([0-9]{2}[/]?){2}" placeholder="01/24" name="expdate">
-					<label for="cvv">CVV: </label>
-                                       	<input type="text" required pattern="^[0-9]{3, 4}$" placeholder="012" name="cvv">
-				</fieldset>
-				<fieldset>
+		<br>
+		<div class="bodywrap">
+			<div>
+				<h2>Cart : 3 Items</h2>
+				<p><a href="#">Product 1</a> : $15</p>
+				<p><a href="#">Product 2</a> : $2</p>
+				<p><a href="#">Product 3</a> : $2</p>
+				<hr>
+				<p>Total : $19</p>
+			</div>
+			<div>
+				<form>
+					<fieldset>
+						<legend>Payment</legend>
+						<p>Accepted Cards: Visa</p>
+						<label for="name">Name on Card: </label>
+						<input type="text" required placeholder="John Doe" name="name">
+						<label for="cnumber">Card Number: </label>
+		                               	<input type="text" required pattern="^4[0-9]{12}(?:[0-9]{3})?$" placeholder="0123456789012345" name="cnumber">
+						<label for="expdate">Expiration Date: </label>
+		                               	<input type="text" required pattern="([0-9]{2}[/]?){2}" placeholder="01/24" name="expdate">
+						<label for="cvv">CVV: </label>
+		                               	<input type="text" required pattern="^[0-9]{3, 4}$" placeholder="012" name="cvv">
+					</fieldset>
+					<fieldset>
+						<br>
+						<legend>Billing Address</legend>
+						<label for="fname">Full Name: </label>
+		                                <input type="text" required placeholder="John Doe" name="fname">
+						<label for="email">Email Address: </label>
+						<input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="jdoe@gmail.com" name="email">
+						<label for="saddr1">Street Address #1: </label>
+						<input type="text" required placeholder="Address Line 1" name="saddr1"/><br>
+						<label for="saddr2">Street Address #2: </label>
+						<input type="text" required placeholder="Address Line 2" name="saddr2"/><br>
+						<label for="city">City: </label>
+						<input type="text" required placeholder="City" name="city"/>
+					
+						<label for="state">State: </label>
+						<input list="states" required placeholder="Select from list" id="state" name="state" />
+						<datalist id="states">
+							<option value="AL">
+							<option value="AK">
+							<option value="AZ">
+							<option value="AR">
+							<option value="CA">
+							<option value="CO">
+							<option value="CT">
+							<option value="DE">
+							<option value="FL">
+							<option value="GA">
+							<option value="HI">
+							<option value="ID">
+							<option value="IL">
+							<option value="IN">
+							<option value="IA">
+							<option value="KS">
+							<option value="KY">
+							<option value="LA">
+							<option value="ME">
+							<option value="MD">
+							<option value="MA">
+							<option value="MI">
+							<option value="MN">
+							<option value="MS">
+							<option value="MO">
+							<option value="MT">
+							<option value="NE">
+							<option value="NV">
+							<option value="NH">
+							<option value="NJ">
+							<option value="NM">
+							<option value="NY">
+							<option value="NC">
+							<option value="ND">
+							<option value="OH">
+							<option value="OK">
+							<option value="OR">
+							<option value="PA">
+							<option value="RI">
+							<option value="SC">
+							<option value="SD">
+							<option value="TN">
+							<option value="TX">
+							<option value="UT">
+							<option value="VT">
+							<option value="VA">
+							<option value="WA">
+							<option value="WV">
+							<option value="WI">
+							<option value="WY">
+						</datalist>
+					
+						<label for="zipcode">Zipcode: </label>
+						<input type="text" required pattern="(\d{5}([\-]\d{4})?)" placeholder="Postal Code" name="zipcode"/><br>
+					</fieldset>
 					<br>
-					<legend>Billing Address</legend>
-					<label for="fname">Full Name: </label>
-                                        <input type="text" required placeholder="John Doe" name="fname">
-					<label for="email">Email Address: </label>
-					<input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="jdoe@gmail.com" name="email">
-					<label for="saddr1">Street Address #1: </label>
-					<input type="text" required placeholder="Address Line 1" name="saddr1"/><br>
-					<label for="saddr2">Street Address #2: </label>
-					<input type="text" required placeholder="Address Line 2" name="saddr2"/><br>
-					<label for="city">City: </label>
-					<input type="text" required placeholder="City" name="city"/>
-				
-					<label for="state">State: </label>
-					<input list="states" required placeholder="Select from list" id="state" name="state" />
-					<datalist id="states">
-						<option value="AL">
-						<option value="AK">
-						<option value="AZ">
-						<option value="AR">
-						<option value="CA">
-						<option value="CO">
-						<option value="CT">
-						<option value="DE">
-						<option value="FL">
-						<option value="GA">
-						<option value="HI">
-						<option value="ID">
-						<option value="IL">
-						<option value="IN">
-						<option value="IA">
-						<option value="KS">
-						<option value="KY">
-						<option value="LA">
-						<option value="ME">
-						<option value="MD">
-						<option value="MA">
-						<option value="MI">
-						<option value="MN">
-						<option value="MS">
-						<option value="MO">
-						<option value="MT">
-						<option value="NE">
-						<option value="NV">
-						<option value="NH">
-						<option value="NJ">
-						<option value="NM">
-						<option value="NY">
-						<option value="NC">
-						<option value="ND">
-						<option value="OH">
-						<option value="OK">
-						<option value="OR">
-						<option value="PA">
-						<option value="RI">
-						<option value="SC">
-						<option value="SD">
-						<option value="TN">
-						<option value="TX">
-						<option value="UT">
-						<option value="VT">
-						<option value="VA">
-						<option value="WA">
-						<option value="WV">
-						<option value="WI">
-						<option value="WY">
-					</datalist>
-				
-					<label for="zipcode">Zipcode: </label>
-					<input type="text" required pattern="(\d{5}([\-]\d{4})?)" placeholder="Postal Code" name="zipcode"/><br>
-				</fieldset>
-				<br>
-				<input type="submit" value="Proceed to Checkout">
-			</form>
+					<input type="submit" value="Proceed to Checkout">
+				</form>
+			</div>
 		</div>
-
 	</body>
 </html>
