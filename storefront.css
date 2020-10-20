@@ -2,6 +2,11 @@
 
 html{
     font-size: 18px;
+    padding-bottom: 25px;
+}
+
+hr{
+    visibility: hidden;
 }
 
 body{
@@ -13,6 +18,14 @@ h1{
     font-weight: 500;
 }
 
+.header{
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 25px rgb(120, 146, 192);
+    width: 100%;
+}
+
 .herotx{
     background-color: cornflowerblue;
     color: white;
@@ -22,11 +35,29 @@ h1{
     background-color: rgb(151, 151, 151);
 }
 
+.herotx.homebnr{
+    font-weight: 300;
+    font-size: 45px;
+    background-image: url("./img/homebnr.jpg");
+    padding: 100px 0 100px 0;
+    background-size: auto;
+}
+
+.herotx.sub1{
+    font-weight: 300;
+    font-size: 50px;
+    background-color: cornflowerblue;
+    background-image: url(./img/settbnr.jpg);
+    background-position-x: -1900px;
+    background-position-y: 20%;
+    background-size: 800px;
+}
+
 .bodywrap{
     background-color: rgb(255, 255, 255);
     margin: 0 200px 0 200px;
-    padding: 0 25px 0 25px;
-    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 15px -4px lightslategray, -12px 0 15px -4px lightslategray;
+    padding: 15px 25px 15px 25px;
+    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 0 0 15px 4px lightslategray, 0 0 15px 4px lightslategray;
     height: auto;
     border-radius: 10px;
 }
