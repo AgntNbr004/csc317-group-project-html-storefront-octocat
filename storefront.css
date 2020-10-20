@@ -80,3 +80,26 @@ h1 b{
     height: auto;
     border-radius: 10px;
 }
+
+fieldset{
+    box-shadow: 0 0 10px rgb(180, 180, 180);
+    border-radius: 7px;
+    border-width: 0;
+}
+
+legend{
+    padding: 5px;
+    font-weight: 400;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(180, 180, 180);
+}
+
+input{
+    border-radius: 3px;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px rgb(180, 180, 180);
+    margin-bottom: 10px;
+}
