@@ -55,29 +55,28 @@ h1 b{
     font-weight: 400;
     font-size: 50px;
     text-shadow: 0 0 25px;
-    background-color: cornflowerblue;
     background-image: url(./img/settbnr.jpg);
     background-position-x: -1900px;
     background-position-y: 20%;
     background-size: 800px;
 }
 
-.herotx.sub2{
-    font-weight: 400;
-    font-size: 50px;
-    text-shadow: 0 0 25px;
-    background-color: cornflowerblue;
+.herotx.sub1.sub2{
     background-image: url(./img/srchbnr.jpg);
     background-position-x: center;
     background-position-y: 45%;
     background-size: auto;
 }
 
+.herotx.herotx.sub1.sub3{
+    background-image: linear-gradient(#92caff,#517fff)
+}
+
 .bodywrap{
     background-color: rgb(255, 255, 255);
     margin: 0 200px 0 200px;
     padding: 15px 25px 15px 25px;
-    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 0 0 15px 4px lightslategray, 0 0 15px 4px lightslategray;
+    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 0 0 15px 4px lightslategray,  0 0 15px 4px lightslategray;
     height: auto;
     border-radius: 10px;
 }
