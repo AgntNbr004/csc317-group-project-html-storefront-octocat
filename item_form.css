@@ -7,10 +7,10 @@
     background-color: rgb(151, 151, 151);
 }
 .imagezoom:hover, .imagezoom:active {
-    background-color: rgb(255, 255, 255);
-    margin: 0 200px 0 200px;
-    padding: 0 25px 0 25px;
-    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 15px -4px lightslategray, -12px 0 15px -4px lightslategray;
+    background-color: rgb(0, 255, 220);
+    margin: 0 0px 0 0px;
+    padding: 0 0px 0 0px;
+    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px #00FFDC, 12px 0 15px -4px lightslategray, -12px 0 15px -4px lightslategray;
     height: auto;
     border-radius: 10px;
 }
