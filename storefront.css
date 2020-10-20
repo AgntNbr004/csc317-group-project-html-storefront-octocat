@@ -10,7 +10,7 @@ hr{
 }
 
 body{
-   background-image: linear-gradient(#b3caf1,#ffffff);
+   background-image: linear-gradient(#8bc1ff,#bebebe);
 }
 
 h1{
@@ -36,16 +36,18 @@ h1{
 }
 
 .herotx.homebnr{
-    font-weight: 300;
+    font-weight: 500;
     font-size: 45px;
+    text-shadow: 0 0 20px;
     background-image: url("./img/homebnr.jpg");
     padding: 100px 0 100px 0;
     background-size: auto;
 }
 
 .herotx.sub1{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 50px;
+    text-shadow: 0 0 25px;
     background-color: cornflowerblue;
     background-image: url(./img/settbnr.jpg);
     background-position-x: -1900px;
