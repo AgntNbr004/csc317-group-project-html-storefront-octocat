@@ -3,6 +3,42 @@
 <head>
 	<title>Team Octocat Storefront Group Project</Title>
 	<link rel="stylesheet" href="storefront.css">
+	<script>
+			function personaltab() {
+ 			 var x = document.getElementById("personaltab");
+  			if (x.style.display === "none") {
+  			  x.style.display = "block";
+  			} else {
+   			 x.style.display = "none";
+  			}
+			}
+			function contacttab() {
+ 			 var x = document.getElementById("contacttab");
+  			if (x.style.display === "none") {
+  			  x.style.display = "block";
+  			} else {
+   			 x.style.display = "none";
+  			}
+			}
+			function addresstab() {
+ 			 var x = document.getElementById("addresstab");
+  			if (x.style.display === "none") {
+  			  x.style.display = "block";
+  			} else {
+   			 x.style.display = "none";
+  			}
+			}
+			function logintab() {
+ 			 var x = document.getElementById("logintab");
+  			if (x.style.display === "none") {
+  			  x.style.display = "block";
+  			} else {
+   			 x.style.display = "none";
+  			}
+			}
+
+		</script>
+
 </head>
 
 <body>
@@ -77,8 +113,9 @@
 		<h3>Account Settings</h3>
 		<form>
 			<fieldset>
-				<legend>Personal Information</legend>
-				<table>
+				<legend onclick="personaltab()">Personal Information &#9660;</legend>
+								
+					<table  id="personaltab">
 					<tr>
 						<td><label for="fname">First Name: </label></td>
 						<td><input type="text" minlength="1" required placeholder="First Name" name="fname" /></td>
@@ -88,11 +125,12 @@
 						<td><input type="text" minlength="1" required placeholder="Last Name" name="lname" /><br></td>
 					</tr>
 				</table>
-			</fieldset>
+				
+							</fieldset>
 			<br>
 			<fieldset>
-				<legend>Contact Information</legend>
-				<table>
+				<legend  onclick="contacttab()">Contact Information &#9660;</legend>
+				<table  id="contacttab">
 					<tr>
 						<td><label for="email">Email Address: </label></td>
 						<td><input type="text" minlength="6" required placeholder="Email Address" name="email" /><br></td>
@@ -105,8 +143,8 @@
 			</fieldset>
 			<br>
 			<fieldset>
-				<legend>Address</legend>
-				<table>
+				<legend  onclick="addresstab()">Address &#9660;</legend>
+				<table  id="addresstab">
 					<tr>
 						<td><label for="saddr1">Street Address #1: </label></td>
 						<td><input type="text" required placeholder="Address Line 1" name="saddr1" /><br></td>
@@ -185,8 +223,8 @@
 			</fieldset>
 			<br>
 			<fieldset>
-				<legend>Login Information</legend>
-				<table>
+				<legend  onclick="logintab()">Login Information &#9660;</legend>
+				<table  id="logintab">
 					<tr>
 					<td><label for="pass">Old Password: </label></td>
 					<td><input type="password" required placeholder="Password" name="pass" /><br></td>
