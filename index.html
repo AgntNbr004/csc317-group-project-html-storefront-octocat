@@ -42,7 +42,9 @@
 				</tr>
 			</table>
 		</div>
+
 		<br>
+
 		<div class="bodywrap">
 			<h1 class="herotx homebnr">Welcome to the Team Octocat Asset Storefront!</h1>
 			<h1>Want to kickstart or take your game to <b> the next level?</b></h3>
@@ -59,7 +61,7 @@
 						<table bgcolor="#FFEFD5">
 							<tr>
 								<td align="center" class="buttonIn">
-									<a href="item1_form.html"><img src="img/rhino.gif" width="200" height="200"></a>
+									<a onMouseOver="mouseOver()" onmouseout="mouseOut()" href="item1_form.html"><img src="img/rhino.gif" width="200" height="200"></a>
 									<br><font size=1>Rocksteady</font></br>
 								</td>
 								<td align="center" class="buttonIn">
@@ -79,6 +81,29 @@
 					</td>
 				</tr>
 			</table>
+
+			<table align="left" bgcolor="lightblue" style="border-color: grey;" id="productInfoBox">
+				<tr>
+					<td>
+						<table bgcolor="#FFEFD5">
+							<tr>
+								<td align="left" class="buttonIn">
+									<a href="item1_form.html"><img src="img/rhino.gif" width="200" height="200"></a>
+									<br><font size=1>Rocksteady</font></br>
+								</td>
+								<td align="left" class="buttonIn">
+									<td>
+										<b>Product Name:</b> Rocksteady<br>
+										<b>Size:</b> 50.26 MB<br>
+										<h3>$14.99</h3><br>
+									</td>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
 			<br>
 			<table align="center" bgcolor="lightblue">
 				<tr colspan=2 align="center">
@@ -162,4 +187,20 @@
 			</div>
 		</footer>
 	</body>
+
+	<script>
+		var InfoBoxy = document.getElementById("productInfoBox");
+		function mouseOver(){
+			if (InfoBoxy.style.display='none'){
+				InfoBoxy.style.display='inline';
+			}
+		}
+
+		function mouseOut(){
+			if (InfoBoxy.style.display='inline'){
+				InfoBoxy.style.display='none';
+			}
+		}
+	</script>
+
 </html>
