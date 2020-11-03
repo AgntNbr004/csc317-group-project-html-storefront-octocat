@@ -24,6 +24,7 @@ function updateCookie(type, item)
 {
 	var cookieExists = getCookie(type);
 	
+	alert(item + " " + "Item Has Been Added To Cart!");
 	if (cookieExists == -1)
 	{
 		createCookie(type, item);
