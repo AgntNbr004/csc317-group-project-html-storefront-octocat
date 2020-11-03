@@ -6,6 +6,11 @@
     padding: 50px 0 50px 0;
     background-color: rgb(151, 151, 151);
 }
+.zoom:hover .zoom:active{
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
 .imagezoom:hover, .imagezoom:active {
     background-color: rgb(0, 255, 220);
     margin: 0 0px 0 0px;
@@ -66,4 +71,53 @@ footer {
 	a:focus { text-decoration: none; color:yellow; }
 	a:hover, a:active { text-decoration: none; color:white }
 
+@keyframes zoominoutsingle {
+    0% {
+        transform: scale(1.04,1.04);
+    }
+  10% {
+        transform: scale(1.06,1.06);
+    }
+     20% {
+        transform: scale(1.03,1.03);
+    }
+    90% {
+        transform: scale(.93,.93);
+    }
+    95% {
+        transform: scale(.96,.96);
+    }
+    100% {
+        transform: scale(.95,.95);
+    }
+}
 
+.imageIn:hover, .imageIn:active  {
+	animation: zoominoutsingle .25s;
+  transform: scale(.95);
+}
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    0% {
+        transform: scale(.99,.99);
+    }
+    25% {
+        transform: scale(1.11,1.11);
+    }
+    50% {
+        transform: scale(1.12,1.12);
+    }
+    75% {
+        transform: scale(1.11,1.11);
+    }
+    100% {
+        transform: scale(1.08,1.08);
+    }
+}
+
+.imageOut:hover, .imageOut:active  {
+	animation: zoominoutsinglefeatured .25s;
+  transform: scale(1.08);
+}class="img-magnifier-container"
