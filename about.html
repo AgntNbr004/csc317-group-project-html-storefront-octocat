@@ -1,162 +1,161 @@
-<html><head>
+<html>
+	<head>
 		<title>Team Octocat Storefront Group Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="storefront.css">
-        <style>
-        html {
-          box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-          box-sizing: inherit;
-        }
-
-        .column {
-          float: left;
-          width: 50%;
-          margin-bottom: 16px;
-          padding: 0 8px;
-        }
-
-        @media screen and (max-width: 1000px) {
-          .column {
-            width: 100%;
-            display: block;
-          }
-        }
-
-        .card {
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          border-radius: 10px;
-        }
-
-        .container {
-          padding: 0 16px;
-        }
-
-        .container::after, .row::after {
-          content: "";
-          clear: both;
-          display: table;
-        }
-    
-        .card-img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-        }
-
-        .subtitle {
-          color: grey;
-        }
-        </style>
+		<style>
+			html {
+				box-sizing: border-box;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			.column {
+				float: left;
+				width: 50%;
+				margin-bottom: 16px;
+				padding: 0 8px;
+			}
+			@media screen and (max-width: 1000px) {
+				.column {
+					width: 100%;
+					display: block;
+				}
+			}
+			.card {
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+				border-radius: 10px;
+			}
+			.container {
+				padding: 0 16px;
+			}
+			.container::after, .row::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.card-img {
+				width: 100%;
+				max-height: 500px;
+				object-fit: cover;
+			}
+			.subtitle {
+				color: grey;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="header" style="background-color:#e3eeff">
 			<table class="fixed" width="100%">
-				<colgroup><col width="50%">
-				<col width="40%">
-				<col width="10%">
-				</colgroup><tbody><tr>
+				<col width="50%">
+				<col width="38%">
+				<col width="12%">
+				<tr>
 					<td>
 						<table>
-							<colgroup><col width="10px">
-							<col width="200px">
-							<col width="100px">
-							<col width="100px">
-							<col width="100px">
-							<col width="100px">
-							</colgroup><tbody><tr>
-								<td>
-                </td>
-                <td><a href="index.html"><img src="img/icon.png" width="175" height="50"></a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightgrey">About</td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="search.html">Search</a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="settings.html">Settings</a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="faq.html">FAQ</a></td>
+							<col width="10px"/>
+							<col width="200px"/>
+							<col width="100px"/>
+							<col width="100px"/>
+							<col width="100px"/>
+							<tr>
+								<td />
+								<td><a href="index.html"><img src="img/icon.png" width="175" height="50"></a></td></td>
+								<td style="border:1px solid black;border-collapse:collapse;text-align:center;background-color:lightgrey">About</td>
+								<td style="border:1px solid black;border-collapse:collapse;text-align:center;background-color:lightblue"><a href="settings.html">Settings</a></td>
+								<td style="border:1px solid black;border-collapse:collapse;text-align:center;background-color:lightblue"><a href="faq.html">FAQ</a></td>
 							</tr>
-						</tbody></table>
+						</table>
 					</td>
+					<td />
 					<td>
-					</td><td>
 						<table>
-							<colgroup><col width="55px">
-							<col width="55px">
-							</colgroup><tbody><tr>
-								<td><a href="payment.html"><img src="img/cart.png" width="40" height="40" style="background-color:#e3eeff;"></a></td>
-								<td><a href="login.html"><img src="img/login.png" width="30" height="30" style="background-color:#e3eeff;"></a></td>
+							<col width="55px"/>
+							<col width="55px"/>
+							<col width="55px"/>
+							<tr>
+								<td><a href="search.html"><img src="img/search.png" width="30" height="30" style="background-color:#e3eeff;"></a></td></td>
+								<td><a href="payment.html"><img src="img/cart.png" width="40" height="40" style="background-color:#e3eeff;"></a></td></td>
+								<td><a href="login.html"><img src="img/login.png" width="30" height="30" style="background-color:#e3eeff;"></a></td></td>
 							</tr>
-						</tbody></table>
+						</table>
 					</td>
 				</tr>
-			</tbody></table>
-			<hr>
+			</table>
 		</div>
 		<br>
 		<div class="bodywrap" style="background-color: ">
-            <br>
-            <div style="padding: 50px;text-align: center;background-color: #e6eef8;color: black;">
-              <img style="display: block;margin-left: auto;margin-right: auto;width: 25%;" src="img/icon.png" alt="Failed to load image: 'TeamOctocat.png'." width="300px">
-              <h1>Team Octocat</h1>
-              <p>An up-and-coming videogame asset store looking to help other indie-developers with their next hit project.</p>
-              <p>See our team of four gamers and computer science majors below.</p>
-            </div>
-            <br>
-			
-			
+			<br>
+			<div style="padding: 50px;text-align: center;background-color: #e6eef8;color: black;">
+				<img style="display: block;margin-left: auto;margin-right: auto;width: 25%;" src="img/icon.png" alt="Failed to load image: 'TeamOctocat.png'." width="300px">
+				<h1>Team Octocat</h1>
+				<p>An up-and-coming videogame asset store looking to help other indie-developers with their next hit project.</p>
+				<p>See our team of four gamers and computer science majors below.</p>
+			</div>
+			<br>
 			<div class="row">
-              <div class="column">
-                <div class="card">
-                  <img class="card-img" src="img/Z_Respicio.png" alt="Zuriel Respicio">
-                  <div class="container">
-                    <h2>Zuriel Respicio</h2>
-                    <p class="subtitle">Co-Founder</p>
-                    <p>Upcoming software developer, also an artist and composer!</p>
-                    <p>SFSU ID: 920592527</p>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="column">
-                <div class="card">
-                  <img class="card-img" src="img/R_Sunico.png" alt="Rafael Sunico">
-                  <div class="container">
-                    <h2>Rafael Sunico</h2>
-                    <p class="subtitle">Co-Founder</p>
-                    <p>I am an aspiring software enginner and a videogame developer. My favourite game of all time is the grand strategy game; Stellaris.</p>
-                    <p>SFSU ID: 920261261</p>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="column">
-                <div class="card">
-                  <img class="card-img" src="img/W_Khan.png" alt="Wajahath Khan">
-                  <div class="container">
-                    <h2>Wajahath Khan</h2>
-                    <p class="subtitle">Co-Founder</p>
-                    <p>Some text that describes me.</p>
-                    <p>SFSU ID: 918172026</p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="card">
-                  <img class="card-img" src="img/B_Rockwell.png" alt="Brent Rockwell">
-                  <div class="container">
-                    <h2>Brent Rockwell</h2>
-                    <p class="subtitle">Co-Founder</p>
-                    <p>Software Engineer for 16 years, gamer for life. Played over 1826 hours on 7 Days to Die.</p>
-                    <p>SFSU ID: 920928616</p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
+				<div class="column">
+					<div class="card">
+						<img class="card-img" src="img/Z_Respicio.png" alt="Zuriel Respicio" />
+						<div class="container">
+							<h2>Zuriel Respicio</h2>
+							<p class="subtitle">Co-Founder</p>
+							<p>Upcoming software developer, also an artist and composer!</p>
+							<p>SFSU ID: 920592527</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="card">
+						<img class="card-img" src="img/R_Sunico.png" alt="Rafael Sunico" />
+						<div class="container">
+							<h2>Rafael Sunico</h2>
+							<p class="subtitle">Co-Founder</p>
+							<p>I am an aspiring software enginner and a videogame developer. My favourite game of all time is the grand strategy game; Stellaris.</p>
+							<p>SFSU ID: 920261261</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="card">
+						<img class="card-img" src="img/W_Khan.png" alt="Wajahath Khan">
+						<div class="container">
+							<h2>Wajahath Khan</h2>
+							<p class="subtitle">Co-Founder</p>
+							<p>Some text that describes me.</p>
+							<p>SFSU ID: 918172026</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="card">
+						<img class="card-img" src="img/B_Rockwell.png" alt="Brent Rockwell">
+						<div class="container">
+							<h2>Brent Rockwell</h2>
+							<p class="subtitle">Co-Founder</p>
+							<p>Software Engineer for 16 years, gamer for life. Played over 1826 hours on 7 Days to Die.</p>
+							<p>SFSU ID: 920928616</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	
-
-</body></html>
+		<br>
+		<footer>
+  		 	<div class="box b">
+				<form>
+					<fieldset>
+						<legend>Asset Store Newsletter</legend>
+						<label for="email">Email Address: </label>
+						<input type="text" minlength="6" required placeholder="Email Address" name="email"/>
+						<br>
+				 		<input type="checkbox" id="scales" name="scales"checked>
+ 				 		<label for="scales">I agree to recieve email updates from Octocat's asset store</label>
+					</fieldset>
+					<br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</footer>
+	</body>
+</html>
