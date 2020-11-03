@@ -79,6 +79,21 @@ h1 b{
     box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 0 0 15px 4px lightslategray,  0 0 15px 4px lightslategray;
     height: auto;
     border-radius: 10px;
+    transition: 0.7s ease-in-out;
+}
+
+@media screen and (max-width: 1400px){
+    .bodywrap, .box{
+        margin: 0 25px 0 25px;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .bodywrap, .box{
+        margin: 0 0 0 0;
+        transition: 0.7s ease-in-out;
+    }
 }
 
 fieldset{
