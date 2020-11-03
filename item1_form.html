@@ -3,6 +3,8 @@
 		<title>Team Octocat Storefront Group Project</Title>
 		<link rel="stylesheet" href="item_form.css">
 		<link rel="stylesheet" href="storefront.css">
+		<script src="magnify.js">
+		</script>	
 	</head>
 	<body>
 		
@@ -51,10 +53,11 @@
 				<table>
 					<tr>
 						<td>
-							<div class="imagezoom">
-								<td width="400" height="400" background="img/rhino.gif" />
-							</div>
+							<div >
+								<td class="img-magnifier-container" width="400" height="400"/>
+									 <img id="itemimg" src="img/rhino.gif" width="400" height="400">
 						</td>
+							</div>
 						<td>
 							<table width="200" height="200" style="border:1px solid black;border-collapse:collapse;background-color:#e3eeff;">
 								<tr>
@@ -79,7 +82,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td style="border:1px solid black;border-collapse:collapse;padding:4px;">
+									<td class="imageIn" style="border:1px solid black;border-collapse:collapse;padding:4px;">
 										<a href="payment.html"><img src="img/add_to_cart.png"></a>
 									</td>
 								</tr>
@@ -90,6 +93,11 @@
 			</center>
 		</div>
 		<br>
+		<script>
+		magnify("itemimg", 3);
+		</script>
+
+
 		<footer>
   		 	<div class="box b">
 				<form>
