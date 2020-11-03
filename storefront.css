@@ -72,9 +72,20 @@ h1 b{
     background-image: linear-gradient(#92caff,#517fff)
 }
 
-table#productInfoBox{
+#productInfoBox{
+    z-index: 1;
+    opacity: 0;
+    overflow: auto;
     display: none;
-    box-shadow: 0 0 1px #444;
+    box-shadow: 5px 5px 1px rgba(68, 68, 68, 0.473);
+    position: absolute;
+    animation: fadeIn 0.5s ease-in-out;
+    -webkit-animation: fadeIn 0.5s 1s;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0}
+    to {opacity: 1;}
 }
 
 .bodywrap{
