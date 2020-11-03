@@ -103,3 +103,55 @@ input{
     box-shadow: 0 0 5px rgb(180, 180, 180);
     margin-bottom: 10px;
 }
+
+
+@keyframes zoominoutsingle {
+    0% {
+        transform: scale(1.04,1.04);
+    }
+  10% {
+        transform: scale(1.05,1.05);
+    }
+     20% {
+        transform: scale(1.01,1.01);
+    }
+    90% {
+        transform: scale(.95,.95);
+    }
+    95% {
+        transform: scale(.96,.96);
+    }
+    100% {
+        transform: scale(.95,.95);
+    }
+}
+
+.buttonIn:hover, .buttonIn:active  {
+	animation: zoominoutsingle .25s;
+  transform: scale(.95);
+}
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    0% {
+        transform: scale(.99,.99);
+    }
+    25% {
+        transform: scale(1.11,1.11);
+    }
+    50% {
+        transform: scale(1.12,1.12);
+    }
+    75% {
+        transform: scale(1.11,1.11);
+    }
+    100% {
+        transform: scale(1.08,1.08);
+    }
+}
+
+.buttonOut:hover, .buttonOut:active  {
+	animation: zoominoutsinglefeatured .25s;
+  transform: scale(1.08);
+}
