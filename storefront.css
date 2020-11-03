@@ -104,7 +104,33 @@ input{
     margin-bottom: 10px;
 }
 
-
+footer {
+	padding: 50px;
+}
+.wrapper {
+	position: relative;
+	display: grid;
+	grid-gap: 10px;
+        grid-template-columns: 300px 300px 600px;
+        background-color: black;
+        color: #444;
+    }
+    .box {
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 0 25px rgb(120, 146, 192);
+	padding: 20px;
+	font-size: 100%;
+    }
+    .a {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .b {
+        grid-column: 3 ;
+        grid-row: 1 / 3;
+    }
+   
 @keyframes zoominoutsingle {
     0% {
         transform: scale(1.04,1.04);
