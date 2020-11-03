@@ -3,6 +3,7 @@
 		<title>Team Octocat Storefront Group Project</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="storefront.css">
+		<script language="javascript" src="cart.js"></script>
 		<style>
 			body {
 				font-size: 17px;
@@ -227,6 +228,44 @@
 						</form>
 					</div>
 				</div>
+				<div class="items">
+					<script language="javascript">
+						<!-- HIDE JAVASCRIPT CODE
+							document.write("testing start \n");
+							var items[] = {"cat", "dog"};
+							printCart(items);
+							items = addItem(items, "bird");
+							printCart(items);
+							document.write("testing finish \n");
+						-->
+					</script>
+				</div>
+				<div class="col-25">
+					<div class="container">
+						<script language="javascript">
+							<!-- Hide JavaScript Code
+							var cartCookieExists = getCookie("cart");
+							
+							if (cartCookieExists == -1)
+							{
+								document.write("Shopping Cart: 0 items<br>");
+							}
+							else
+							{
+								
+								var cartItems = cartCookieExists.split("|");
+
+								document.write("Shopping Cart: " + cartItems.length + " items<br>");
+								for (i in cartItems)
+								{
+									document.write(cartItems[i] + "<br>");
+								}
+							}
+							-->
+						</script>
+					</div>
+				</div>
+				<!--
 				<div class="col-25">
 					<div class="container">
 						<h4>Cart <span class="price" style="color:black"> <b>4</b></span></h4>
@@ -238,6 +277,7 @@
 						<p>Total <span class="price" style="color:black"><b>$21.96</b></span></p>
 					</div>
 				</div>
+				-->
 			</div>
 		</div>
 		<br>

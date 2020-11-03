@@ -3,8 +3,8 @@
 		<title>Team Octocat Storefront Group Project</Title>
 		<link rel="stylesheet" href="item_form.css">
 		<link rel="stylesheet" href="storefront.css">
-		<script src="magnify.js">
-		</script>	
+		<script language="javascript" src="cart.js"></script>
+		<script src="magnify.js"></script>
 	</head>
 	<body>
 		
@@ -82,8 +82,8 @@
 									</td>
 								</tr>
 								<tr>
-									<td class="imageIn" style="border:1px solid black;border-collapse:collapse;padding:4px;">
-										<a href="payment.html"><img src="img/add_to_cart.png"></a>
+									<td style="border:1px solid black;border-collapse:collapse;padding:4px;">
+										<img onClick="updateCookie('cart', 'rhino')" src="img/add_to_cart.png">
 									</td>
 								</tr>
 							</table>
