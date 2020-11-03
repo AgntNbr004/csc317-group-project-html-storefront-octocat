@@ -80,7 +80,7 @@ h1 b{
     box-shadow: 5px 5px 1px rgba(68, 68, 68, 0.473);
     position: absolute;
     animation: fadeIn 0.5s ease-in-out;
-    -webkit-animation: fadeIn 0.5s 1s;
+    -webkit-animation: fadeIn 0.5s 0.3s;
 }
 
 @keyframes fadeIn{
