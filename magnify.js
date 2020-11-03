@@ -25,6 +25,7 @@ function magnify(imgID, zoom) {
   mag.addEventListener("touchmove", moveMagnifier);
   img.addEventListener("touchmove", moveMagnifier);
   function moveMagnifier(e) {
+	
     var pos, x, y;
     
     e.preventDefault();
@@ -33,10 +34,21 @@ function magnify(imgID, zoom) {
     x = pos.x;
     y = pos.y;
     
-    if (x > img.width - (width / zoom)) {x = img.width - (width / zoom);}
-    if (x < width / zoom) {x = width / zoom;}
-    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
-    if (y < h / zoom) {y = h / zoom;}
+    if (x > img.width - (width / zoom)) {
+		x = img.width - (width / zoom);
+		mag.style.display = "none";
+	} else if (x < width / zoom) {
+		x = width / zoom;
+		mag.style.display = "none";
+	} else if (y > img.height - (h / zoom)) {
+		y = img.height - (h / zoom);
+		mag.style.display = "none";
+	} else if (y < h / zoom) {
+		y = h / zoom;
+		mag.style.display = "none";
+	} else {
+		mag.style.display = "block";
+	}
     
     mag.style.left = (x - width) + "px";
     mag.style.top = (y - h) + "px";
