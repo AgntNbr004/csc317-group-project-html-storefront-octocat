@@ -1,0 +1,12 @@
+Brent's unnecessary notes:
+
+Just in case you guys aren't doing this, this needs to be in this folder to work:
+	/var/www/html
+
+To get to this directory:
+	1. Open up a File Explorer window
+	2. Other Locations -> Computer -> var -> www -> html
+
+Once these files are there, you can see the site by opening FireFox and going to:
+	localhost/index.php
+

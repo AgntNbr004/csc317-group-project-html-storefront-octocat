@@ -1,0 +1,39 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.column {
+	float: left;
+	width: 25%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+@media screen and (max-width: 1000px) {
+	.column {
+		width: 100%;
+		display: block;
+	}
+}
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.container {
+	padding: 0 16px;
+}
+.container::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.card-img {
+	width: 100%;
+	max-height: 500px;
+	object-fit: cover;
+}
+.subtitle {
+	color: grey;
+}
+

@@ -44,7 +44,7 @@ h1 b{
     font-weight: 500;
     font-size: 45px;
     text-shadow: 0 0 20px;
-    background-image: url("./img/homebnr.jpg");
+    background-image: url(../media/img/homebnr.jpg);
     background-position-y: 35%;
     background-position-x: 55%;
     padding: 100px 0 100px 0;
@@ -55,14 +55,14 @@ h1 b{
     font-weight: 400;
     font-size: 50px;
     text-shadow: 0 0 25px;
-    background-image: url(./img/settbnr.jpg);
+    background-image: url(../media/img/settbnr.jpg);
     background-position-x: -1900px;
     background-position-y: 20%;
     background-size: 800px;
 }
 
 .herotx.sub1.sub2{
-    background-image: url(./img/srchbnr.jpg);
+    background-image: url(../media/img/srchbnr.jpg);
     background-position-x: center;
     background-position-y: 45%;
     background-size: auto;
@@ -185,6 +185,7 @@ footer {
 	animation: zoominoutsingle .25s;
   transform: scale(.95);
 }
+
 @keyframes zoominoutsinglefeatured {
     0% {
         transform: scale(1,1);
@@ -210,3 +211,63 @@ footer {
 	animation: zoominoutsinglefeatured .25s;
   transform: scale(1.08);
 }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0px;
+  font-size: 15px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: black;
+  background-color: #f1f1f1;
+  align:center;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+}
+
+#wrapper
+{
+	text-align: center;
+	font-size: 25px;
+	background-color: lightblue;
+}
+
+#products
+{
+	overflow-x:scroll;
+	font-size: 10px;
+}
+

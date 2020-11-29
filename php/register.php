@@ -1,51 +1,15 @@
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Team Octocat Storefront Group Project</Title>
-		<link rel="stylesheet" href="storefront.css">
+		<link rel="stylesheet" href="../css/storefront.css">
+		<script language="javascript" src="../js/cart.js"></script>
 	</head>
 	<body>
-		<div class="header" style="background-color:#e3eeff">
-			<table class="fixed" width="100%">
-				<col width="50%">
-				<col width="40%">
-				<col width="10%">
-				<tr>
-					<td>
-						<table>
-							<col width="10px"/>
-							<col width="200px"/>
-							<col width="100px"/>
-							<col width="100px"/>
-							<col width="100px"/>
-							<col width="100px"/>
-							<tr>
-								<td />
-								<td><a href="index.html"><img src="img/icon.png" width="175" height="50"></a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="about.html">About</a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="search.html">Search</a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="settings.html">Settings</a></td>
-								<td style="border: 1px solid black;border-collapse: collapse;text-align:center;background-color:lightblue"><a href="faq.html">FAQ</a></td>
-							</tr>
-						</table>
-					</td>
-					<td />
-					<td>
-						<table>
-							<col width="55px"/>
-							<col width="55px"/>
-							<tr>
-								<td><a href="payment.html"><img src="img/cart.png" width="40" height="40" style="background-color:#e3eeff;"></a></td></td>
-								<td><a href="login.html"><img src="img/login.png" width="30" height="30" style="background-color:#e3eeff;"></a></td></td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-			<hr>
-		</div>
+		<?php include "../php/header.php" ?>
 		<br>
 		<div class="bodywrap">
-			<form action="./registerconf.html">
+			<form action="../html/registerconf.html">
 				<center>
 					<thead>
 						<h1>Account Registration</h1>
@@ -186,5 +150,6 @@
 				<input type="submit" value="Register">
 			</form>
 		</div>
+		<?php include "../html/footer.html" ?>
 	</body>
 </html>
