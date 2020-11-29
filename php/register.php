@@ -9,7 +9,7 @@
 		<?php include "../php/header.php" ?>
 		<br>
 		<div class="bodywrap">
-			<form action="../html/registerconf.html">
+			<form action="registersubmit.php" method="GET">
 				<center>
 					<thead>
 						<h1>Account Registration</h1>
@@ -118,7 +118,7 @@
 						</tr>
 						<tr>
 							<td><label for="zipcode">Zip code*: </label></td>
-							<td><input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" ame="zip code" /><br></td>
+							<td><input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" name="zipcode" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -142,9 +142,9 @@
 				</fieldset>
 				<br>
 				<fieldset>
-					<input type="checkbox" required >By checking this box and clicking Register, I hereby agree to their <a href=#>Privacy Policy</a> and the <a href=#>Terms of Use</a>*</input>
+					<input type="checkbox" required name="pptos">By checking this box and clicking Register, I hereby agree to their <a href=#>Privacy Policy</a> and the <a href=#>Terms of Use</a>*</input>
 					<br>
-					<input type="checkbox">I would also like to recieve promotional emails about product announcements, offers, news and more</input>
+					<input type="checkbox" name="signup">I would also like to recieve promotional emails about product announcements, offers, news and more</input>
 				</fieldset>
 				<br>
 				<input type="submit" value="Register">

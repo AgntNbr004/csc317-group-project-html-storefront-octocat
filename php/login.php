@@ -26,7 +26,7 @@
 						<br>
 						<a href=#>Password Reset</a>
 						<br>
-						<a href=../html/register.html>Create new account</a>
+						<a href=./register.php>Create new account</a>
 						<br>
 						<br>
 						<input type="submit" value="Login">

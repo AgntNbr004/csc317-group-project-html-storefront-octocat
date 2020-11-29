@@ -1,4 +1,6 @@
-Brent's unnecessary notes:
+--------------------------
+BRENT'S UNNECESSARY NOTES:
+--------------------------
 
 Just in case you guys aren't doing this, this needs to be in this folder to work:
 	/var/www/html
@@ -9,4 +11,45 @@ To get to this directory:
 
 Once these files are there, you can see the site by opening FireFox and going to:
 	localhost/index.php
+
+You guys will have to transition to PHP and MySQL to see items stored in a database.
+I strongly suggest you guys get DataGrip for the MySQL part, it's free.
+Go download it, install it, then:
+	1. Create a new super user:
+		username: "brent"
+		password: "Student123!"
+	2. Create a database schema "Octocat"
+	3. Load the sql scripts and run them in this order:
+		create_tables
+		reference_tables
+		sample_data
+
+
+
+--------------------------------------
+THINGS WE SHOULD DO BEFORE TURNING IN:
+--------------------------------------
+	01. Settings should not show up until user is logged in.
+	    PHP SESSIONS
+	02. Settings should be populated with user info from database.
+	    PHP +  DATABASE
+	03. Website "Theme" should be stored in DB and pulled from DB 
+	    PHP +  DATABASE
+	04. "Salt" the username / password to increase security
+	    PHP +  DATABASE
+	05. Allow Settings to update database
+	    PHP +  DATABASE
+	06. login.php "Password Reset" link does nothing.
+	07. Newsletter from footer should set flag / generate alert
+	    PHP +  DATABASE
+	08. Create banner for "Account Registration"
+BR->	09. Allow for account registration to log information to the database /
+	    generate alerts if needed (eg. username already exists).
+	10. Account Registration page has a "Terms of Use" and a "Privacy Policy"
+	    both of which do nothing. Find some basic lorem ipsum to fill in.
+BR->	11. Add middle name / middle initial, date of birth, and phone type
+	    dropdown to signup page
+	    PHP + DATABASE
+	12. Find a way to display order history to customer
+	    PHP + DATABASE
 
