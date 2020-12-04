@@ -37,14 +37,14 @@
 				{
 					$id = $record['PRODUCT_ID'];
 					$prod = $record['productname'];
-					$desc = $record["description"];
-					$price = $record["price"];
-					$size = $record["filesizemb"];
-					$tris = $record["triangles"];
-					$verts = $record["vertices"];
-					$rigg = $record["rigged"]? 'Yes': 'No';
-					$anim = $record["animated"]? 'Yes': 'No';
-					$loc = $record["imagelocation"];
+					$desc = $record['description'];
+					$price = $record['price'];
+					$size = $record['filesizemb'];
+					$tris = $record['triangles'];
+					$verts = $record['vertices'];
+					$rigg = $record['rigged']? 'Yes': 'No';
+					$anim = $record['animated']? 'Yes': 'No';
+					$loc = $record['imagelocation'];
 				
 					echo "<td><table bgcolor=\"#FFEFD5\"><col width=\"200px\" /><tr>";
 					echo "<td align=\"center\" class=\"buttonIn\">";
@@ -76,16 +76,18 @@
 				{
 					$id = $record['PRODUCT_ID'];
 					$prod = $record['productname'];
-					$desc = $record["description"];
-					$price = $record["price"];
-					$size = $record["filesizemb"];
-					$loc = $record["imagelocation"];
+					$desc = $record['description'];
+					$price = $record['price'];
+					$size = $record['filesizemb'];
+					$loc = $record['imagelocation'];
+					$lines = $record['codelines'];
 				
 					echo "<td><table bgcolor=\"#FFEFD5\"><col width=\"200px\" /><tr>";
 					echo "<td align=\"center\" class=\"buttonIn\">";
 					echo "<a href=\"./php/item_form.php?pid=$id\"><img src=\"$loc\" width=\"200\" height=\"200\"></a><br>";
 					echo "<br><b>Product Name:</b> $prod<br>";
 					echo "<b>Size:</b> $size MB<br>";
+					echo "<b>Lines:</b> $lines<br>";
 					echo "<h3>\${$price}</h3></td></table></td>";
 				}
 				
@@ -101,16 +103,18 @@
 				{
 					$id = $record['PRODUCT_ID'];
 					$prod = $record['productname'];
-					$desc = $record["description"];
-					$price = $record["price"];
-					$size = $record["filesizemb"];
-					$loc = $record["imagelocation"];
+					$desc = $record['description'];
+					$price = $record['price'];
+					$size = $record['filesizemb'];
+					$loc = $record['imagelocation'];
+					$length = $record['lengthsec'];
 				
 					echo "<td><table bgcolor=\"#FFEFD5\"><col width=\"200px\" /><tr>";
 					echo "<td align=\"center\" class=\"buttonIn\">";
 					echo "<a href=\"./php/item_form.php?pid=$id\"><img src=\"$loc\" width=\"200\" height=\"200\"></a><br>";
 					echo "<br><b>Product Name:</b> $prod<br>";
 					echo "<b>Size:</b> $size MB<br>";
+					echo "<b>Length:</b> $length sec<br>";
 					echo "<h3>\${$price}</h3></td></table></td>";
 				}
 				

@@ -24,8 +24,16 @@
 							<td><input type="text" minlength="1" required placeholder="First Name" name="fname" /></td>
 						</tr>
 						<tr>
+							<td><label for="fname">Middle Name: </label></td>
+							<td><input type="text" required placeholder="Middle Name or Initial" name="mname" /></td>
+						</tr>
+						<tr>
 							<td><label for="lname">Last Name*: </label></td>
 							<td><input type="text" minlength="1" required placeholder="Last Name" name="lname" /><br></td>
+						</tr>
+						<tr>
+							<td><label for="lname">Birth date: </label></td>
+							<td><input type="date" name="dob" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -40,6 +48,31 @@
 						<tr>
 							<td><label for="phone">Phone Number*: </label></td>
 							<td><input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" name="phone" /><br></td>
+						</tr>
+						<tr>
+							<td><label for="phonetype">Phone Type*: </label></td>
+							<td><input list="phonetypes" required placeholder="Select from list" id="phonetype" name="phonetype" />
+								<datalist id="phonetypes">
+									<?php
+										$server='localhost';
+										$user="brent";
+										$password = "Student123!";
+										$database = "Octocat";
+										$connection = new mysqli($server, $user, $password, $database);
+										
+										$query = "SELECT * FROM PhoneType;";
+										$result = $connection->query($query);
+										
+										while ($record = $result->fetch_assoc())
+										{
+											$type = $record['phonetype'];
+											echo "<option value=\"$type\">";
+										}
+										
+										$connection->close();
+									?>
+								</datalist>
+							</input></td>
 						</tr>
 					</table>
 				</fieldset>

@@ -47,9 +47,6 @@ BR->	09. Allow for account registration to log information to the database /
 	    generate alerts if needed (eg. username already exists).
 	10. Account Registration page has a "Terms of Use" and a "Privacy Policy"
 	    both of which do nothing. Find some basic lorem ipsum to fill in.
-BR->	11. Add middle name / middle initial, date of birth, and phone type
-	    dropdown to signup page
-	    PHP + DATABASE
-	12. Find a way to display order history to customer
+	11. Find a way to display order history to customer
 	    PHP + DATABASE
 
