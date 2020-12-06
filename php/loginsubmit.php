@@ -22,6 +22,13 @@
 		$_SESSION["UserID"] = "$userid";
 		$_SESSION["LastAction"] = "$currtime";
 		
+		if(isset($_SESSION["UserID"])){ //redirect to homepage after login
+		header('Location: ../index.php');
+		die();
+
+		} else {
+		echo "Please try again";
+		}		
 	}
 	else
 	{

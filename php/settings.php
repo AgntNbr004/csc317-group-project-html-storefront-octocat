@@ -1,3 +1,99 @@
+<?php
+//include('login.php');
+session_start();
+
+if(isset($_SESSION["UserID"])){
+	$id = ($_SESSION["UserID"]);
+	//echo $id;
+	$server='localhost';
+	$user="brent";
+	$password = "Student123!";
+	$database = "Octocat";
+	$connection = new mysqli($server, $user, $password, $database);
+
+//selects data from User's table
+	$query = "SELECT * FROM `User` WHERE `USER_ID`= '$id'";
+	
+	$result = $connection->query($query);
+	$count = mysqli_num_rows($result);
+	//echo $count;
+
+	while($row = mysqli_fetch_array($result)) {
+	//echo "<br><br>";
+	//echo $row['addressline1'];
+	//echo $row['USER_ID'];
+	//echo $row['firstname'];
+	$firstname = $row['firstname'];
+	//echo $row['lastname'];
+	$lastname = $row['lastname'];
+	$password = $row['password'];
+	//echo $row['birthdate'];
+	}	
+//selects data from Address table	
+	$queryAddress = "SELECT * FROM `Address` WHERE `USER_ID`= '$id'";
+	
+	$resultAddress = $connection->query($queryAddress);
+	$countAddress = mysqli_num_rows($resultAddress);
+	//echo $countAddress;
+
+	while($row = mysqli_fetch_array($resultAddress)) {
+	//echo $row['city'];
+	$city = $row['city'];
+	$address1 = $row['addressline1'];
+	$address2 = $row['addressline2'];
+	$state_id = $row['STATE_ID'];  //Use id to select from State Table.
+	$zipcode = $row['zipcode'];
+	
+	}
+//selects data from state table
+	//echo $state_id;
+	$queryState = "SELECT * FROM `State` WHERE `STATE_ID`= '$state_id'";
+	
+	$resultState = $connection->query($queryState);
+	$countState = mysqli_num_rows($resultState);
+	//echo $countState;
+
+	while($row = mysqli_fetch_array($resultState)) {
+
+	//echo $row['city'];
+	$abbreviation = $row['abbreviation'];
+	$stateName = $row['name'];
+	
+	}
+//select data from email table
+	$queryEmail = "SELECT * FROM `Email` WHERE `USER_ID`= '$id'";
+	
+	$resultEmail = $connection->query($queryEmail);
+	$countEmail = mysqli_num_rows($resultEmail);
+	//echo $countEmail;
+
+	while($row = mysqli_fetch_array($resultEmail)) {
+	//echo $row['emailaddress'];
+	$email = $row['emailaddress'];	
+	
+	}
+	
+//select data from phone table
+	$queryPhone = "SELECT * FROM `Phone` WHERE `USER_ID`= '$id'";
+	
+	$resultPhone = $connection->query($queryPhone);
+	$countPhone = mysqli_num_rows($resultPhone);
+	echo $countPhone;
+
+	while($row = mysqli_fetch_array($resultPhone)) {
+	echo $row['phonenumber'];
+	$phoneNumber = $row['phonenumber'];
+	
+	
+	}
+
+
+} else {
+echo "Not Logged In";
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -34,11 +130,11 @@
 						<table id="personaltab">
 						<tr>
 							<td><label for="fname">First Name: </label></td>
-							<td><input type="text" minlength="1" required placeholder="First Name" name="fname" /></td>
+							<td><input type="text" minlength="1" required placeholder="First Name" value="<?php echo htmlspecialchars($firstname); ?>" name="fname" /></td>
 						</tr>
 						<tr>
 							<td><label for="lname">Last Name: </label></td>
-							<td><input type="text" minlength="1" required placeholder="Last Name" name="lname" /><br></td>
+							<td><input type="text" minlength="1" required placeholder="Last Name" value="<?php echo htmlspecialchars($lastname); ?>" name="lname" /><br></td>
 						</tr>
 					</table>
 					
@@ -49,11 +145,11 @@
 					<table  id="contacttab">
 						<tr>
 							<td><label for="email">Email Address: </label></td>
-							<td><input type="text" minlength="6" required placeholder="Email Address" name="email" /><br></td>
+							<td><input type="text" minlength="6" required placeholder="Email Address" value="<?php echo htmlspecialchars($email); ?>" name="email" /><br></td>
 						</tr>
 						<tr>
 							<td><label for="phone">Phone Number: </label></td>
-							<td><input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" name="phone" /><br></td>
+							<td><input type="text" minlength="10" maxlength="14" required placeholder="Phone Number" value="<?php echo htmlspecialchars($phoneNumber); ?>" name="phone" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -63,20 +159,20 @@
 					<table  id="addresstab">
 						<tr>
 							<td><label for="saddr1">Street Address #1: </label></td>
-							<td><input type="text" required placeholder="Address Line 1" name="saddr1" /><br></td>
+							<td><input type="text" required placeholder="Address Line 1" value="<?php echo htmlspecialchars($address1); ?>" name="saddr1" /><br></td>
 						</tr>
 						<tr>
 							<td><label for="saddr2">Street Address #2: </label></td>
-							<td><input type="text" required placeholder="Address Line 2" name="saddr2" /><br></td>
+							<td><input type="text" required placeholder="Address Line 2" value="<?php echo htmlspecialchars($address2); ?>" name="saddr2" /><br></td>
 						</tr>
 						<tr>
 							<td><label for="city">City: </label></td>
-							<td><input type="text" required placeholder="City" name="city" /></td>
+							<td><input type="text" required placeholder="City" value="<?php echo htmlspecialchars($city); ?>" name="city" /></td>
 						</tr>
 						<tr>
 							<td><label for="state">State: </label></td>
 							<td>
-								<input list="states" required placeholder="Select from list" id="state" name="state" />
+								<input list="states" required placeholder="Select from list" value="<?php echo htmlspecialchars($abbreviation); ?>" id="state" name="state" />
 								<datalist id="states">
 									<option value="AL">
 									<option value="AK">
@@ -133,7 +229,7 @@
 						</tr>
 						<tr>
 							<td><label for="zipcode">Zipcode: </label></td>
-							<td><input type="text" required placeholder="Postal Code" minlength="5" maxlength="10" ame="zipcode" /><br></td>
+							<td><input type="text" required placeholder="Postal Code" value="<?php echo htmlspecialchars($zipcode); ?>" minlength="5" maxlength="10" ame="zipcode" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
