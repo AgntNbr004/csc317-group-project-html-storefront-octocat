@@ -1,6 +1,6 @@
 USE Octocat;
 
-INSERT INTO Octocat.State (name, abbreviation)
+INSERT INTO State (name, abbreviation)
 VALUES ('Alabama', 'AL'),
 	('Alaska', 'AK'),
 	('Arizona', 'AZ'),
@@ -55,31 +55,31 @@ VALUES ('Alabama', 'AL'),
 	('Puerto Rico', 'PR');
 
 SELECT *
-FROM Octocat.State;
+FROM State;
 
-INSERT INTO Octocat.CardType (cardtype)
+INSERT INTO CardType (cardtype)
 VALUES ('American Express'),
        ('Discover'),
        ('MasterCard'),
        ('VISA');
 
 SELECT *
-FROM Octocat.CardType;
+FROM CardType;
 
-INSERT INTO Octocat.ProductType (producttype)
+INSERT INTO ProductType (producttype)
 VALUES ('3D Models'),
        ('Audio'),
        ('Scripts');
 
 SELECT *
-FROM Octocat.ProductType;
+FROM ProductType;
 
-INSERT INTO Octocat.PhoneType (phonetype)
+INSERT INTO PhoneType (phonetype)
 VALUES ('Home Phone'),
        ('Work Phone'),
        ('Mobile Phone');
 
 SELECT *
-FROM Octocat.PhoneType;
+FROM PhoneType;
 
 SELECT * FROM PhoneType;

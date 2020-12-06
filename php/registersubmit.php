@@ -1,24 +1,29 @@
 <?php
-	$uname = $_GET["uname"];
-	$upass = $_GET["pass"];
-	$upassconf = $_GET["passconf"];
-	$fname = $_GET["fname"];
-	$lname = $_GET["lname"];
-	$pptos = $_GET["pptos"];
-	$suemail = $_GET["signup"];
+	$uname = $_GET['uname'];
+	$upass = $_GET['pass'];
+	$upassconf = $_GET['passconf'];
+	$fname = $_GET['fname'];
+	$mname = $_GET['mname'];
+	$lname = $_GET['lname'];
+	$bday = $_GET['dob'];
+	$pptos = isset($_GET['pptos']);
 	
-	$email = $_GET["email"];
+	$email = $_GET['email'];
+	$suemail = isset($_GET['signup']);
 	
-	$addr1 = $_GET["saddr1"];
-	$addr2 = $_GET["saddr2"];
-	$city = $_GET["city"];
-	$state = $_GET["state"];
-	$zip = $_GET["zipcode"];
+	$phone = $_GET['phone'];
+	$ptype = $_GET['phonetype'];
 	
-	$server='localhost';
-	$user="brent";
-	$password = "Student123!";
-	$database = "Octocat";
+	$addr1 = $_GET['saddr1'];
+	$addr2 = $_GET['saddr2'];
+	$city = $_GET['city'];
+	$state = $_GET['state'];
+	$zip = $_GET['zipcode'];
+	
+	$server = 'localhost';
+	$user = 'brent';
+	$password = 'Student123!';
+	$database = 'Octocat';
 	$connection = new mysqli($server, $user, $password, $database);
 
 	$query = "SELECT USER_ID FROM User WHERE username='$uname';";
@@ -42,16 +47,26 @@
 	}
 	else
 	{
-		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '', '$lname', '$pptos', $suemail, true);";
+		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '$mname', '$lname', CAST('$bday' AS DATE), $pptos, true);";
 		$result = $connection->query($query);
 		
-		$query = "SELECT USER_ID FROM User WHERE username='$uname';";
+		echo $connection->error;
+				
+		$query = "SELECT USER_ID FROM User WHERE username = '$uname';";
 		$result = $connection->query($query);
 		$count = mysqli_num_rows($result);
 		
 		$userid = ($result->fetch_assoc())['USER_ID'];
+		echo ("<script>alert('NEW USER ID: $userid')</script>");
 		
-		$query = "INSERT INTO Email VALUES (NULL, $userid, '$email', false)";
+		$query = "INSERT INTO Email VALUES (NULL, $userid, '$email', $suemail)";
+		$result = $connection->query($query);
+		
+		$query = "SELECT PHONETYPE_ID FROM PhoneType where phonetype='$ptype'";
+		$result = $connection->query($query);
+		$phoneid = ($result->fetch_assoc())['PHONETYPE_ID'];
+		
+		$query = "INSERT INTO Phone VALUES (NULL, $userid, '$phone', $phoneid)";
 		$result = $connection->query($query);
 		
 		$query = "INSERT INTO Address VALUES (NULL, $userid, true, '$addr1', '$addr2', '$city', (SELECT state_id FROM State WHERE abbreviation = '$state'), '$zip', false)";
@@ -59,5 +74,5 @@
 	}
 
 	$connection->close();
-	header("Location: registerconf.php"); 
+	echo "<script>window.location = 'registerconf.php'</script>";
 ?>

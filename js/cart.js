@@ -33,5 +33,6 @@ function updateCookie(type, item)
 	{
 		createCookie(type, cookieExists + "," + item);
 	}
+	location.reload();
 }
 

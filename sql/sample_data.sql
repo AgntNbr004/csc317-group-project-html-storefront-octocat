@@ -3,7 +3,7 @@ USE Octocat;
 /* SAMPLE DATA: Giving a user to log in with */
 SET FOREIGN_KEY_CHECKS = 0; TRUNCATE TABLE User; SET FOREIGN_KEY_CHECKS = 1;
 insert into User
-values (NULL, 'brentrockwell', 'testing123', 'brent', '', 'rockwell', true, true, true);
+values (NULL, 'brentrockwell', 'testing123', 'brent', '', 'rockwell', CAST('1984-09-11' AS DATE), true, true);
 
 select *
 from User;

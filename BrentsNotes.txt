@@ -42,11 +42,9 @@ THINGS WE SHOULD DO BEFORE TURNING IN:
 	06. login.php "Password Reset" link does nothing.
 	07. Newsletter from footer should set flag / generate alert
 	    PHP +  DATABASE
-	08. Create banner for "Account Registration"
-BR->	09. Allow for account registration to log information to the database /
-	    generate alerts if needed (eg. username already exists).
-	10. Account Registration page has a "Terms of Use" and a "Privacy Policy"
+	08. Create banner for "Account Registration"\
+	09. Account Registration page has a "Terms of Use" and a "Privacy Policy"
 	    both of which do nothing. Find some basic lorem ipsum to fill in.
-	11. Find a way to display order history to customer
+	10. Find a way to display order history to customer
 	    PHP + DATABASE
 
