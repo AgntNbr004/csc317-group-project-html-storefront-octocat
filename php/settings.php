@@ -78,10 +78,10 @@ if(isset($_SESSION["UserID"])){
 	
 	$resultPhone = $connection->query($queryPhone);
 	$countPhone = mysqli_num_rows($resultPhone);
-	echo $countPhone;
+	//echo $countPhone;
 
 	while($row = mysqli_fetch_array($resultPhone)) {
-	echo $row['phonenumber'];
+	//echo $row['phonenumber'];
 	$phoneNumber = $row['phonenumber'];
 	
 	
@@ -91,6 +91,7 @@ if(isset($_SESSION["UserID"])){
 } else {
 echo "Not Logged In";
 }
+
 
 ?>
 
@@ -105,7 +106,7 @@ echo "Not Logged In";
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap">
+		<div class="bodywrap" action="settingsUpdate.php" method="GET">
 			<h1 class="herotx sub1">Settings</h1>
 			<h3>General Settings</h3>
 			<table>
@@ -123,7 +124,7 @@ echo "Not Logged In";
 			<input type="submit" value="Update Site Theme">
 			<br>
 			<h3>Account Settings</h3>
-			<form>
+			<form action="settingsUpdate.php" method="GET">
 				<fieldset>
 					<legend onclick="personaltab()">Personal Information &#9660;</legend>
 									
@@ -238,16 +239,16 @@ echo "Not Logged In";
 					<legend  onclick="logintab()">Login Information &#9660;</legend>
 					<table  id="logintab">
 						<tr>
-						<td><label for="pass">Old Password: </label></td>
-						<td><input type="password" required placeholder="Password" name="pass" /><br></td>
+						<td><label for="oldPass">Old Password: </label></td>
+						<td><input type="password" required placeholder="Password" name="oldPass" /><br></td>
 						</tr>
 						<tr>
-							<td><label for="pass">New Password: </label></td>
-							<td><input type="password" required placeholder="Password" name="pass" /><br></td>
+							<td><label for="newPass">New Password: </label></td>
+							<td><input type="password" required placeholder="Password" name="newPass" /><br></td>
 						</tr>
 						<tr>
-							<td><label for="pass">Confirm New Password: </label></td>
-							<td><input type="password" required placeholder="Password" name="pass" /><br></td>
+							<td><label for="conPass">Confirm New Password: </label></td>
+							<td><input type="password" required placeholder="Password" name="conPass" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -262,7 +263,8 @@ echo "Not Logged In";
 						<td><input type="button" style="background-color:darkred; color:white" value="Cancel Account"></td>
 					</tr>
 				</table>
-			</form>
+			
+	</form>
 
 			<h3>Site Settings</h3>
 			<input type="checkbox" id="unitycompatible" name="unitycompatible" value="Unity" />
