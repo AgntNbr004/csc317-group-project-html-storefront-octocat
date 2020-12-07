@@ -230,7 +230,7 @@ echo "Not Logged In";
 						</tr>
 						<tr>
 							<td><label for="zipcode">Zipcode: </label></td>
-							<td><input type="text" required placeholder="Postal Code" value="<?php echo htmlspecialchars($zipcode); ?>" minlength="5" maxlength="10" ame="zipcode" /><br></td>
+							<td><input type="text" required placeholder="Postal Code" value="<?php echo htmlspecialchars($zipcode); ?>" minlength="5" maxlength="10" name="zipcode" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -244,11 +244,11 @@ echo "Not Logged In";
 						</tr>
 						<tr>
 							<td><label for="newPass">New Password: </label></td>
-							<td><input type="password" required placeholder="Password" name="newPass" /><br></td>
+							<td><input type="password" placeholder="Password" name="newPass" /><br></td>
 						</tr>
 						<tr>
 							<td><label for="conPass">Confirm New Password: </label></td>
-							<td><input type="password" required placeholder="Password" name="conPass" /><br></td>
+							<td><input type="password" placeholder="Password" name="conPass" /><br></td>
 						</tr>
 					</table>
 				</fieldset>
