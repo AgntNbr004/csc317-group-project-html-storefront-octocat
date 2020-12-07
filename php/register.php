@@ -148,7 +148,7 @@
 					<input type="checkbox" name="signup">I would also like to recieve promotional emails about product announcements, offers, news and more</input>
 				</fieldset>
 				<br>
-				<input type="submit" value="Register">
+				<input type="submit" value="Register" class="buttonOut">
 			</form>
 		</div>
 		<?php include "../html/footer.html" ?>

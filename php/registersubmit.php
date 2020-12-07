@@ -13,7 +13,6 @@
 	
 	$phone = $_GET['phone'];
 	$ptype = $_GET['phonetype'];
-	
 	$addr1 = $_GET['saddr1'];
 	$addr2 = $_GET['saddr2'];
 	$city = $_GET['city'];

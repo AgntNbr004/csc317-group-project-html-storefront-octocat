@@ -21,6 +21,7 @@
 			<br>
 			<div class="row">
 				<div class="column">
+				<div  class="buttonOut">
 					<div class="card">
 						<img class="card-img" src="../media/img/B_Rockwell.png" alt="Brent Rockwell">
 						<div class="container">
@@ -30,8 +31,10 @@
 							<p>SFSU ID: 920928616</p>
 						</div>
 					</div>
+					</div>
 				</div>
 				<div class="column">
+				<div  class="buttonOut">
 					<div class="card">
 						<img class="card-img" src="../media/img/Z_Respicio.png" alt="Zuriel Respicio" />
 						<div class="container">
@@ -41,8 +44,10 @@
 							<p>SFSU ID: 920592527</p>
 						</div>
 					</div>
+					</div>
 				</div>
 				<div class="column">
+					<div  class="buttonOut">
 					<div class="card">
 						<img class="card-img" src="../media/img/R_Sunico.png" alt="Rafael Sunico" />
 						<div class="container">
@@ -52,8 +57,10 @@
 							<p>SFSU ID: 920261261</p>
 						</div>
 					</div>
+					</div>
 				</div>
 				<div class="column">
+					<div  class="buttonOut">
 					<div class="card">
 						<img class="card-img" src="../media/img/W_Khan.png" alt="Wajahath Khan">
 						<div class="container">
@@ -62,6 +69,7 @@
 							<p>I didn't want to put anything here.</p>
 							<p>SFSU ID: 918172026</p>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>

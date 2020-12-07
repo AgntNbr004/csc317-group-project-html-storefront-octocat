@@ -258,7 +258,7 @@ echo "Not Logged In";
 					<col width="80%" />
 					<col width="100px" />
 					<tr>
-						<td><input type="submit" value="Update Account Information"></td>
+						<td><input type="submit" class="buttonOut" value="Update Account Information"></td>
 						<td />
 						<td><input type="button" style="background-color:darkred; color:white" value="Cancel Account"></td>
 					</tr>
@@ -274,7 +274,7 @@ echo "Not Logged In";
 			<input type="checkbox" id="cryenginecompatible" name="cryenginecompatible" value="CryEngine" />
 			<label for="cryenginecompatible">Only display assets that are compatible with <b>CryEngine</b></label><br>
 			<br>
-			<input type="submit" value="Update Site Preferences">
+			<input type="submit" class="buttonOut" value="Update Site Preferences">
 		</div>
 		<?php include "../html/footer.html" ?>
 	</body>

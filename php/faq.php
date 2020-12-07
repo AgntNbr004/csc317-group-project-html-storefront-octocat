@@ -48,7 +48,7 @@
 					<input type="text" minlength="6" required placeholder="Email Address" name="email"/>
 				</fieldset>
 				<br>
-				<input type="submit" value="Submit">
+				<input type="submit" class="buttonOut" value="Submit">
 			</form>
 		</div>
 		<?php include "../html/footer.html" ?>

@@ -29,7 +29,7 @@
 					<a href=./register.php>Create new account</a>
 					<br>
 					<br>
-					<input type="submit" value="Login">
+					<input type="submit" class="buttonOut"  value="Login">
 				</form>
 			</center>
 		</div>
