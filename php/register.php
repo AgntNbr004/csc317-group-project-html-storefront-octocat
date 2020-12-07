@@ -51,8 +51,8 @@
 						</tr>
 						<tr>
 							<td><label for="phonetype">Phone Type*: </label></td>
-							<td><input list="phonetypes" required placeholder="Select from list" id="phonetype" name="phonetype" />
-								<datalist id="phonetypes">
+							<td><!--<input list="phonetypes" required placeholder="Select from list" id="phonetype" name="phonetype" />-->
+								<select id="phonetypes" name="phonetype">
 									<?php
 										$server='localhost';
 										$user="brent";
@@ -66,13 +66,13 @@
 										while ($record = $result->fetch_assoc())
 										{
 											$type = $record['phonetype'];
-											echo "<option value=\"$type\">";
+											echo "<option value=\"$type\">$type</option>";
 										}
 										
 										$connection->close();
 									?>
-								</datalist>
-							</input></td>
+								</select>
+							<!--</input>--></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -94,8 +94,8 @@
 						</tr>
 						<tr>
 							<td><label for="state">State*: </label></td>
-							<td><input list="states" required placeholder="Select from list" id="state" name="state" />
-								<datalist id="states">
+							<td>
+								<select id="states" name="state">
 									<?php
 										$server='localhost';
 										$user="brent";
@@ -109,12 +109,12 @@
 										while ($record = $result->fetch_assoc())
 										{
 											$type = $record['abbreviation'];
-											echo "<option value=\"$type\">";
+											echo "<option value=\"$type\">$type</option>";
 										}
 										
 										$connection->close();
 									?>
-								</datalist>
+								</select>
 					</td>
 						</tr>
 						<tr>
