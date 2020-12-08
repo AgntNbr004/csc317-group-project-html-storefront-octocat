@@ -1,4 +1,5 @@
 <?php
+$theme_id = "bodywrap";
 session_start();
 if(isset($_SESSION["UserID"])){
 	$id = ($_SESSION["UserID"]);
@@ -8,7 +9,7 @@ if(isset($_SESSION["UserID"])){
 	$password = "Student123!";
 	$database = "Octocat";
 	$connection = new mysqli($server, $user, $password, $database);
-	$lemons = "orange";
+	//$lemons = "orange";
 //selects data from User's table
 	$query = "SELECT * FROM `User` WHERE `USER_ID`= '$id'";
 	$result = $connection->query($query);
