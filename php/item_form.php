@@ -51,7 +51,7 @@
 									echo "<tr><td style=\"border:1px solid black;border-collapse:collapse;padding:4px;\"><b>Animated:</b><br>$anim<br></td></tr>";
 									echo "<tr><td style=\"border:1px solid black;border-collapse:collapse;padding:4px;\"><b>Price:</b><br>\${$price}<br></td></tr>";
 									echo "<tr><td style=\"border:1px solid black;border-collapse:collapse;padding:4px;\">";
-									echo "<img class=\"buttonIn\" width=\"300\" name=\"submit\" onClick=\"updateCookie('cart', $id)\" src=\"../media/img/add_to_cart.png\"></td></tr>";
+									echo "<center><img class=\"buttonIn\" width=\"300\" name=\"submit\" onClick=\"updateCookie('cart', $id)\" src=\"../media/img/add_to_cart.png\"></center></td></tr>";
 									echo "</table></td>";
 								}
 								
