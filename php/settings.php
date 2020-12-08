@@ -27,6 +27,8 @@ if(isset($_SESSION["UserID"])){
 	//echo $row['lastname'];
 	$lastname = $row['lastname'];
 	$password = $row['password'];
+	//$theme_id = $row['theme_id'];
+	//echo $row['theme_id'];
 	//echo $row['birthdate'];
 	}	
 //selects data from Address table	
@@ -102,27 +104,35 @@ echo "Not Logged In";
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../css/storefront.css" />
 		<script language="javascript" src="../js/cart.js"></script>
-	</head>
+		<?php include "../php/theme.php" ?>
+		</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap" action="settingsUpdate.php" method="GET">
+		<div class="<?php echo ($theme_id); ?>" action="settingsUpdate.php" method="GET">
 			<h1 class="herotx sub1">Settings</h1>
 			<h3>General Settings</h3>
 			<table>
 				<tr>
 					<td><label for="theme">Website Theme: </label></td>
 					<td>
-						<select name="themes" id="themes">
+						<form action="themeUpdate.php" method="GET">
+							<input type="submit" value="Toggle Theme">
+						</form>
+
+						<!--<select name="themes" id="themes">
 							<option value="light">Light</option>
 							<option value="dark">Dark</option>
-						</select>
+						</select>-->
 					</td>
 				</tr>
 			</table>
-			<br>
+			<!--<br>
+			<form action="themeUpdate.php" method="GET">
 			<input type="submit" value="Update Site Theme">
-			<br>
+			</form>
+			<br>-->
+
 			<h3>Account Settings</h3>
 			<form action="settingsUpdate.php" method="GET">
 				<fieldset>

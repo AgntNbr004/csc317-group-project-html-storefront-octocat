@@ -6,11 +6,13 @@
 		<link rel="stylesheet" href="../css/storefront.css" />
 		<link rel="stylesheet" href="../css/about.css">
 		<script language="javascript" src="../js/cart.js"></script>
+		<?php include "../php/theme.php" ?>
+
 	</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap" style="background-color: ">
+		<div class="<?php echo ($theme_id); ?>" style="background-color: ">
 			<br>
 			<div style="padding: 50px;text-align: center;background-color: #e6eef8;color: black;">
 				<img style="display: block;margin-left: auto;margin-right: auto;width: 25%;" src="../media/img/icon.png" alt="Failed to load image: 'TeamOctocat.png'." width="300px">

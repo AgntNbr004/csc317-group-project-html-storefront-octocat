@@ -6,11 +6,12 @@
 		<link rel="stylesheet" href="../css/storefront.css">
 		<script language="javascript" src="../js/cart.js"></script>
 		<script language="javascript" src="../js/magnify.js"></script>
+		<?php include "../php/theme.php" ?>
 	</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap">
+		<div class="<?php echo ($theme_id); ?>">
 			<center>
 				<table>
 					<tr>

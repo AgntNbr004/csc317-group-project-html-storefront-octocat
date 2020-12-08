@@ -5,11 +5,12 @@
 		<link rel="stylesheet" href="../css/storefront.css">
 		<script language="javascript" src="../js/search.js"></script>
 		<script language="javascript" src="../js/cart.js"></script>
+		<?php include "../php/theme.php" ?>
 	</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap">
+		<div class="<?php echo ($theme_id); ?>">
 			<h1 class="herotx sub1 sub2">Search</h1>
 			<form>
 				<fieldset>

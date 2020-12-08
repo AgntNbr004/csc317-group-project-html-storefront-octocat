@@ -35,4 +35,6 @@ function updateCookie(type, item)
 	}
 	location.reload();
 }
-
+function lmao(){
+document.getElementById("bodywrp").className = "bodywrapBrown";
+}

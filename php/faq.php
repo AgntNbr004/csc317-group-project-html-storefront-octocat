@@ -5,11 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../css/storefront.css">
 		<script language="javascript" src="../js/cart.js"></script>
+		<?php include "../php/theme.php" ?>
 	</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap">
+		<div class="<?php echo ($theme_id); ?>">
 			<h1 class="herotx sub1 sub3">Frequently Asked Questions</h1>
 			<h3>Common Questions:</h3>
 			<ul>

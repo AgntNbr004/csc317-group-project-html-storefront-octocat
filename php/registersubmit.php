@@ -7,7 +7,8 @@
 	$lname = $_GET['lname'];
 	$bday = $_GET['dob'];
 	$pptos = isset($_GET['pptos']);
-	
+	$theme_id = "bodywrap";
+
 	$email = $_GET['email'];
 	$suemail = isset($_GET['signup']);
 	
@@ -46,7 +47,7 @@
 	}
 	else
 	{
-		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '$mname', '$lname', CAST('$bday' AS DATE), $pptos, true);";
+		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '$mname', '$lname', CAST('$bday' AS DATE), $pptos, true, '$theme_id');";
 		$result = $connection->query($query);
 		
 		echo $connection->error;

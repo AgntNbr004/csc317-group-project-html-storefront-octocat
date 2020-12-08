@@ -4,12 +4,15 @@
 		<title>Team Octocat Storefront Group Project</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/storefront.css" />
-		<script language="javascript" src="../js/cart.js"></script>
+		<script language="javascript" src="js/cart.js"></script>
+		<?php include "php/theme.php" ?>
+
+		
 	</head>
 	<body>
 		<?php include "./php/header.php" ?>
 		<br>
-		<div class="bodywrap">
+		<div class="<?php echo ($theme_id); ?>">
 			<h1 class="herotx homebnr">Welcome to the Team Octocat Asset Storefront!</h1>
 			<h1>Want to kickstart your game or take it to the <b>next level?</b></h1>
 			Check out our inventory of literally tens of products to be used in your project here!<br>

@@ -4,11 +4,12 @@
 		<title>Team Octocat Storefront Group Project</Title>
 		<link rel="stylesheet" href="../css/storefront.css">
 		<script language="javascript" src="../js/cart.js"></script>
+		<?php include "../php/theme.php" ?>
 	</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="bodywrap">
+		<div class="<?php echo ($theme_id); ?>">
 			<center>
 				<form action="loginsubmit.php" method="GET">
 					<thead><h1>Customer Portal Login</h1></thead>
