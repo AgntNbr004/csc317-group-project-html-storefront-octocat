@@ -57,7 +57,7 @@
 		$count = mysqli_num_rows($result);
 		
 		$userid = ($result->fetch_assoc())['USER_ID'];
-		echo ("<script>alert('NEW USER ID: $userid')</script>");
+		echo ("<script>alert('You Have Successfully Regisered Your Account!')</script>");
 		
 		$query = "INSERT INTO Email VALUES (NULL, $userid, '$email', $suemail)";
 		$result = $connection->query($query);

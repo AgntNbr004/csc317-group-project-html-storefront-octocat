@@ -1,5 +1,6 @@
 <?php
 $logged = "0";
+$theme_id = "bodywrap";
 session_start();
 if(isset($_SESSION["UserID"])){
 	$id = ($_SESSION["UserID"]);

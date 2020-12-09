@@ -91,7 +91,10 @@ if(isset($_SESSION["UserID"])){
 
 
 } else {
-echo "Not Logged In";
+	//echo "Not Logged In";
+	header("Location: login.php");
+	die();
+
 }
 
 
