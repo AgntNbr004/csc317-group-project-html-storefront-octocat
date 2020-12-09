@@ -47,7 +47,7 @@
 	}
 	else
 	{
-		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '$mname', '$lname', CAST('$bday' AS DATE), $pptos, true, '$theme_id');";
+		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '$mname', '$lname', CAST('$bday' AS DATE), '$theme_id', $pptos, true);";
 		$result = $connection->query($query);
 		
 		echo $connection->error;

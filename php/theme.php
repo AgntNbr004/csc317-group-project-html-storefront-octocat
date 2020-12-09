@@ -1,9 +1,9 @@
 <?php
-$theme_id = "bodywrap";
+$logged = "0";
 session_start();
 if(isset($_SESSION["UserID"])){
 	$id = ($_SESSION["UserID"]);
-
+	$logged = "1";
 		$server='localhost';
 	$user="brent";
 	$password = "Student123!";

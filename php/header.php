@@ -1,4 +1,5 @@
 <div class="header" style="background-color:#e3eeff">
+	<?php include "../php/theme.php" ?>
 	<table class="fixed" width="100%">
 		<col width="50%">
 		<col width="38%">
@@ -22,11 +23,11 @@
 							var urlParsed = currentUrl.split('/');
 							var pageName = urlParsed[(urlParsed.length - 1)].split('.')[0];
 							var path = ".";
-							
+							var logg = <?php echo $logged; ?>;
 							if (pageName.toUpperCase()=="INDEX")
 							{
 								path="./php";
-								document.write("<td><a href=\"./index.php\"><img class=\"buttonOut\" src=\"../media/img/icon.png\" width=\"175\" height=\"50\"></a></td></td>");
+								document.write("<td><a href=\"./index.php\"><img class=\"buttonOut\" src=\"media/img/icon.png\" width=\"175\" height=\"50\"></a></td></td>");
 							}
 							else
 							{
@@ -41,7 +42,10 @@
 							{
 								document.write("<td class=\"buttonOut\" style=\"border:1px solid black;border-collapse:collapse;text-align:center;background-color:lightblue\"><a href=\"" + path + "/about.php\">About</a></td>");
 							}
-							
+							if(logg === 0) { 
+								//alert("ohla");
+							}
+							else {
 							if (pageName.toUpperCase()=="SETTINGS")
 							{
 								document.write("<td class=\"buttonOut\" style=\"border:1px solid black;border-collapse:collapse;text-align:center;background-color:lightgrey\">Settings</td>");
@@ -49,6 +53,7 @@
 							else
 							{
 								document.write("<td class=\"buttonOut\" style=\"border:1px solid black;border-collapse:collapse;text-align:center;background-color:lightblue\"><a href=\"" + path + "/settings.php\">Settings</a></td>");
+							}
 							}
 							
 							if (pageName.toUpperCase()=="FAQ")
