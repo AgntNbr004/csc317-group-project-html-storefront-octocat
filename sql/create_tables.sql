@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS User
     middlename NVARCHAR(50) NULL,
     lastname NVARCHAR(50) NOT NULL,
     birthdate DATE NULL,
+    theme_id VARCHAR(25) NULL,
     pptos BOOL NULL,
     active BOOL NOT NULL
 )
