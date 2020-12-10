@@ -2,7 +2,6 @@
 	function login($uname, $upass) {
 		//$uname = $_GET["uname"];
 		//$upass = $_GET["pass"];
-		echo "<script>alert('$uname / $upass');</script>";
 		
 		$server='localhost';
 		$user="brent";
