@@ -29,22 +29,25 @@ Go download it, install it, then:
 --------------------------------------
 THINGS WE SHOULD DO BEFORE TURNING IN:
 --------------------------------------
-	01. Settings should not show up until user is logged in.
-	    PHP SESSIONS
-	02. Settings should be populated with user info from database.
+BR =>	01. Newsletter from footer should set flag / generate alert
 	    PHP +  DATABASE
-	03. Website "Theme" should be stored in DB and pulled from DB 
-	    PHP +  DATABASE
-	04. "Salt" the username / password to increase security
-	    PHP +  DATABASE
-	05. Allow Settings to update database
-	    PHP +  DATABASE
-	06. login.php "Password Reset" link does nothing.
-	07. Newsletter from footer should set flag / generate alert
-	    PHP +  DATABASE
-	08. Create banner for "Account Registration"\
-	09. Account Registration page has a "Terms of Use" and a "Privacy Policy"
+ZR =>	02. Create banner for "Account Registration".
+RS =>	03. Account Registration page has a "Terms of Use" and a "Privacy Policy"
 	    both of which do nothing. Find some basic lorem ipsum to fill in.
-	10. Find a way to display order history to customer
+WK =>	04. Shopping cart should also check if we're signed in and populate any
+	    stored address and payment information.
+	05. 
+
+
+
+--------------
+NICE-TO-HAVES:
+--------------
+	01. "Salt" the username / password to increase security
+	    PHP +  DATABASE
+	02. Find a way to display order history to customer
 	    PHP + DATABASE
+	03. On Payment.php, move "Shopping Cart" and "Submit order" to a second column
+	    PHP
+	04. 
 

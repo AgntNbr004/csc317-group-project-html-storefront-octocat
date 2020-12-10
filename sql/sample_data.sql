@@ -1,9 +1,10 @@
+--P
 USE Octocat;
 
 /* SAMPLE DATA: Giving a user to log in with */
 SET FOREIGN_KEY_CHECKS = 0; TRUNCATE TABLE User; SET FOREIGN_KEY_CHECKS = 1;
 insert into User
-values (NULL, 'brentrockwell', 'testing123', 'brent', '', 'rockwell', CAST('1984-09-11' AS DATE), 'bodywrap', true, true);
+values (NULL, 'brentrockwell', 'testing123', 'brent', '', 'rockwell', CAST('1984-09-11' AS DATE), 'bodywrap', true, true, true, true, false);
 
 select *
 from User;
@@ -167,7 +168,7 @@ values -- 3D MODELS --
         'Child',
         'Basic 3D model of a child',
         1.49,
-        'media/img/avatar.gif',
+        'media/img/firstmodel.gif',
         800,
         1700,
         1735,
@@ -175,12 +176,12 @@ values -- 3D MODELS --
         false,
         NULL,
         NULL),
-        (NULL,
+       (NULL,
         (select PRODUCTTYPE_ID from ProductType where producttype='3D Models'),
-        'Boulder',
-        '3D model of an big rock',
+        'Spear',
+        '3D model of an spear',
         0.49,
-        'media/img/firstmodel.gif',
+        'media/img/spear.gif',
         800,
         9800,
         9853,
@@ -518,3 +519,4 @@ values (NULL, 1, 4, 1, 2.99),
 
 select *
 from OrderDetails;
+

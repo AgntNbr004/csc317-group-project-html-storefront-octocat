@@ -1,7 +1,6 @@
 function createCookie(type, item)
 {
 	var expirationDate = new Date();
-	
 	expirationDate.setMonth(expirationDate.getMonth() + 1);
 	document.cookie = type + "=" + item + ";path=/;expires=" + expirationDate.toGMTString();
 }
@@ -14,7 +13,7 @@ function getCookie(type)
 	{
 		if ((allCookies[i].indexOf(type)) != -1)
 		{
-			return allCookies[i].substring(type.length + 1, allCookies[i].length);
+			return allCookies[i].substring(type.length + 2, allCookies[i].length);
 		}
 	}
 	return -1;
@@ -35,6 +34,4 @@ function updateCookie(type, item)
 	}
 	location.reload();
 }
-function lmao(){
-document.getElementById("bodywrp").className = "bodywrapBrown";
-}
+

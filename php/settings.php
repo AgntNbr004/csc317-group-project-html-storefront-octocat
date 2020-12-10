@@ -1,10 +1,8 @@
 <?php
-//include('login.php');
 session_start();
 
-if(isset($_SESSION["UserID"])){
+if(isset($_SESSION["UserID"])) {
 	$id = ($_SESSION["UserID"]);
-	//echo $id;
 	$server='localhost';
 	$user="brent";
 	$password = "Student123!";
@@ -12,92 +10,58 @@ if(isset($_SESSION["UserID"])){
 	$connection = new mysqli($server, $user, $password, $database);
 
 //selects data from User's table
-	$query = "SELECT * FROM `User` WHERE `USER_ID`= '$id'";
-	
+	$query = "SELECT * FROM User WHERE USER_ID = $id;";
 	$result = $connection->query($query);
-	$count = mysqli_num_rows($result);
-	//echo $count;
 
 	while($row = mysqli_fetch_array($result)) {
-	//echo "<br><br>";
-	//echo $row['addressline1'];
-	//echo $row['USER_ID'];
-	//echo $row['firstname'];
-	$firstname = $row['firstname'];
-	//echo $row['lastname'];
-	$lastname = $row['lastname'];
-	$password = $row['password'];
-	//$theme_id = $row['theme_id'];
-	//echo $row['theme_id'];
-	//echo $row['birthdate'];
+		$firstname = $row['firstname'];
+		$lastname = $row['lastname'];
+		$password = $row['password'];
+		$unity = $row['unity'] ? 'checked' : '';
+		$unreal = $row['unreal'] ? 'checked' : '';
+		$cry = $row['cryengine'] ? 'checked' : '';
 	}	
 //selects data from Address table	
-	$queryAddress = "SELECT * FROM `Address` WHERE `USER_ID`= '$id'";
-	
+	$queryAddress = "SELECT * FROM Address WHERE USER_ID = $id;";
 	$resultAddress = $connection->query($queryAddress);
 	$countAddress = mysqli_num_rows($resultAddress);
-	//echo $countAddress;
 
 	while($row = mysqli_fetch_array($resultAddress)) {
-	//echo $row['city'];
-	$city = $row['city'];
-	$address1 = $row['addressline1'];
-	$address2 = $row['addressline2'];
-	$state_id = $row['STATE_ID'];  //Use id to select from State Table.
-	$zipcode = $row['zipcode'];
-	
+		$city = $row['city'];
+		$address1 = $row['addressline1'];
+		$address2 = $row['addressline2'];
+		$state_id = $row['STATE_ID'];  //Use id to select from State Table.
+		$zipcode = $row['zipcode'];
 	}
 //selects data from state table
-	//echo $state_id;
-	$queryState = "SELECT * FROM `State` WHERE `STATE_ID`= '$state_id'";
-	
+	$queryState = "SELECT * FROM State WHERE STATE_ID = $state_id;";
 	$resultState = $connection->query($queryState);
 	$countState = mysqli_num_rows($resultState);
-	//echo $countState;
 
 	while($row = mysqli_fetch_array($resultState)) {
-
-	//echo $row['city'];
-	$abbreviation = $row['abbreviation'];
-	$stateName = $row['name'];
-	
+		$abbreviation = $row['abbreviation'];
+		$stateName = $row['name'];
 	}
 //select data from email table
-	$queryEmail = "SELECT * FROM `Email` WHERE `USER_ID`= '$id'";
-	
+	$queryEmail = "SELECT * FROM Email WHERE USER_ID = $id;";
 	$resultEmail = $connection->query($queryEmail);
 	$countEmail = mysqli_num_rows($resultEmail);
-	//echo $countEmail;
 
 	while($row = mysqli_fetch_array($resultEmail)) {
-	//echo $row['emailaddress'];
-	$email = $row['emailaddress'];	
-	
+		$email = $row['emailaddress'];	
 	}
-	
 //select data from phone table
-	$queryPhone = "SELECT * FROM `Phone` WHERE `USER_ID`= '$id'";
-	
+	$queryPhone = "SELECT * FROM Phone WHERE USER_ID = $id;";
 	$resultPhone = $connection->query($queryPhone);
 	$countPhone = mysqli_num_rows($resultPhone);
-	//echo $countPhone;
 
 	while($row = mysqli_fetch_array($resultPhone)) {
-	//echo $row['phonenumber'];
-	$phoneNumber = $row['phonenumber'];
-	
-	
+		$phoneNumber = $row['phonenumber'];
 	}
-
-
 } else {
-	//echo "Not Logged In";
 	header("Location: login.php");
 	die();
-
 }
-
-
 ?>
 
 <!DOCTYPE HTML>
@@ -108,11 +72,12 @@ if(isset($_SESSION["UserID"])){
 		<link rel="stylesheet" href="../css/storefront.css" />
 		<script language="javascript" src="../js/cart.js"></script>
 		<?php include "../php/theme.php" ?>
+		<?php include "../php/settingsUpdate.php" ?>
 		</head>
 	<body>
 		<?php include "../php/header.php" ?>
 		<br>
-		<div class="<?php echo ($theme_id); ?>" action="settingsUpdate.php" method="GET">
+		<div class="<?php echo ($theme_id); ?>">
 			<h1 class="herotx sub1">Settings</h1>
 			<h3>General Settings</h3>
 			<table>
@@ -137,7 +102,15 @@ if(isset($_SESSION["UserID"])){
 			<br>-->
 
 			<h3>Account Settings</h3>
-			<form action="settingsUpdate.php" method="GET">
+			<?php
+				if(array_key_exists('updateaccount', $_POST)) { 
+					updateAccount();
+				} 
+				else if(array_key_exists('cancelaccount', $_POST)) {
+					cancelAccount();
+				}
+			?>
+			<form method="post">
 				<fieldset>
 					<legend onclick="personaltab()">Personal Information &#9660;</legend>
 									
@@ -177,7 +150,7 @@ if(isset($_SESSION["UserID"])){
 						</tr>
 						<tr>
 							<td><label for="saddr2">Street Address #2: </label></td>
-							<td><input type="text" required placeholder="Address Line 2" value="<?php echo htmlspecialchars($address2); ?>" name="saddr2" /><br></td>
+							<td><input type="text" placeholder="Address Line 2" value="<?php echo htmlspecialchars($address2); ?>" name="saddr2" /><br></td>
 						</tr>
 						<tr>
 							<td><label for="city">City: </label></td>
@@ -188,56 +161,25 @@ if(isset($_SESSION["UserID"])){
 							<td>
 								<input list="states" required placeholder="Select from list" value="<?php echo htmlspecialchars($abbreviation); ?>" id="state" name="state" />
 								<datalist id="states">
-									<option value="AL">
-									<option value="AK">
-									<option value="AZ">
-									<option value="AR">
-									<option value="CA">
-									<option value="CO">
-									<option value="CT">
-									<option value="DE">
-									<option value="FL">
-									<option value="GA">
-									<option value="HI">
-									<option value="ID">
-									<option value="IL">
-									<option value="IN">
-									<option value="IA">
-									<option value="KS">
-									<option value="KY">
-									<option value="LA">
-									<option value="ME">
-									<option value="MD">
-									<option value="MA">
-									<option value="MI">
-									<option value="MN">
-									<option value="MS">
-									<option value="MO">
-									<option value="MT">
-									<option value="NE">
-									<option value="NV">
-									<option value="NH">
-									<option value="NJ">
-									<option value="NM">
-									<option value="NY">
-									<option value="NC">
-									<option value="ND">
-									<option value="OH">
-									<option value="OK">
-									<option value="OR">
-									<option value="PA">
-									<option value="RI">
-									<option value="SC">
-									<option value="SD">
-									<option value="TN">
-									<option value="TX">
-									<option value="UT">
-									<option value="VT">
-									<option value="VA">
-									<option value="WA">
-									<option value="WV">
-									<option value="WI">
-									<option value="WY">
+									<?php
+										$server='localhost';
+										$user="brent";
+										$password = "Student123!";
+										$database = "Octocat";
+										$connection = new mysqli($server, $user, $password, $database);
+										
+										$query = "SELECT * FROM State;";
+										$result = $connection->query($query);
+										
+										while($record = $result->fetch_assoc())
+										{
+											$state = $record['abbreviation'];
+										
+											echo "<option value=\"$state\">";
+										}
+										
+										$connection->close();
+									?>
 								</datalist>
 							</td>
 						</tr>
@@ -253,7 +195,7 @@ if(isset($_SESSION["UserID"])){
 					<table  id="logintab">
 						<tr>
 						<td><label for="oldPass">Old Password: </label></td>
-						<td><input type="password" required placeholder="Password" name="oldPass" /><br></td>
+						<td><input type="password" placeholder="Password" name="oldPass" /><br></td>
 						</tr>
 						<tr>
 							<td><label for="newPass">New Password: </label></td>
@@ -271,21 +213,21 @@ if(isset($_SESSION["UserID"])){
 					<col width="80%" />
 					<col width="100px" />
 					<tr>
-						<td><input type="submit" class="buttonOut" value="Update Account Information"></td>
+						<td><input name="updateaccount" type="submit" class="buttonOut" value="Update Account Information"></td>
 						<td />
-						<td><input type="button" style="background-color:darkred; color:white" value="Cancel Account"></td>
+						<td><input name="cancelaccount" type="submit" class="buttonOut" style="background-color:darkred; color:white" value="Cancel Account"></td>
 					</tr>
 				</table>
 			
 	</form>
 
 			<h3>Site Settings</h3>
-			<input type="checkbox" id="unitycompatible" name="unitycompatible" value="Unity" />
-			<label for="unitycompatible">Only display assets that are compatible with <b>Unity</b></label><br>
-			<input type="checkbox" id="unrealcompatible" name="unrealcompatible" value="Unreal" />
-			<label for="unrealcompatible">Only display assets that are compatible with <b>Unreal</b></label><br>
-			<input type="checkbox" id="cryenginecompatible" name="cryenginecompatible" value="CryEngine" />
-			<label for="cryenginecompatible">Only display assets that are compatible with <b>CryEngine</b></label><br>
+			<input type="checkbox" id="unitycompatible" name="unitycompatible" value="Unity" <?php echo htmlspecialchars($unity); ?>/>
+			<label for="unitycompatible">Display assets that are compatible with <b>Unity</b></label><br>
+			<input type="checkbox" id="unrealcompatible" name="unrealcompatible" value="Unreal" <?php echo htmlspecialchars($unreal); ?>/>
+			<label for="unrealcompatible">Display assets that are compatible with <b>Unreal</b></label><br>
+			<input type="checkbox" id="cryenginecompatible" name="cryenginecompatible" value="CryEngine" <?php echo htmlspecialchars($cry); ?>/>
+			<label for="cryenginecompatible">Display assets that are compatible with <b>CryEngine</b></label><br>
 			<br>
 			<input type="submit" class="buttonOut" value="Update Site Preferences">
 		</div>

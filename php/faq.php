@@ -37,7 +37,7 @@
 				<li>
 					Q: What games do you like to play?<br>
 					A: It's varied! Check the "About" section to find our favorites!
-				</li>
+				</li><br>
 			</ul>
 			<form>
 				<fieldset>
