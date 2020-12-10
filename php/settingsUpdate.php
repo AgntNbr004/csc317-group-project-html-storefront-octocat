@@ -2,18 +2,18 @@
 function updateAccount() {
 		session_start();
 		$userid = ($_SESSION["UserID"]);
-		$fname = $_GET['fname'];
-		$lname = $_GET['lname'];
-		$oldPass = $_GET['oldPass'];
-		$newPass = $_GET['newPass'];
-		$conPass = $_GET['conPass'];
-		$email = $_GET['email'];
-		$phone = $_GET['phone'];
-		$address1 = $_GET['saddr1'];
-		$address2 = $_GET['saddr2'];
-		$city = $_GET['city'];
-		$zipcode = $_GET['zipcode'];
-		$state = $_GET['state'];
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
+		$oldPass = $_POST['oldPass'];
+		$newPass = $_POST['newPass'];
+		$conPass = $_POST['conPass'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$address1 = $_POST['saddr1'];
+		$address2 = $_POST['saddr2'];
+		$city = $_POST['city'];
+		$zipcode = $_POST['zipcode'];
+		$state = $_POST['state'];
 
 	// Connection
 		$server = 'localhost';
@@ -79,7 +79,6 @@ function updateAccount() {
 
 	// Redirect
 		header("Location: settings.php");
-		die();
 	}
 
 	function cancelAccount() {

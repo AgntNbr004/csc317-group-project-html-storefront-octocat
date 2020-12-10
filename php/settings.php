@@ -20,7 +20,7 @@ if(isset($_SESSION["UserID"])) {
 		$unity = $row['unity'] ? 'checked' : '';
 		$unreal = $row['unreal'] ? 'checked' : '';
 		$cry = $row['cryengine'] ? 'checked' : '';
-	}	
+	}
 //selects data from Address table	
 	$queryAddress = "SELECT * FROM Address WHERE USER_ID = $id ORDER BY principal DESC LIMIT 1;";
 	$resultAddress = $connection->query($queryAddress);

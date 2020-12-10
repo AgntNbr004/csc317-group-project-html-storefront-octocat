@@ -6,11 +6,11 @@
 	$mname = $_GET['mname'];
 	$lname = $_GET['lname'];
 	$bday = $_GET['dob'];
-	$pptos = isset($_GET['pptos']);
+	$pptos = isset($_GET['pptos']) ? 'true' : 'false';
 	$theme_id = "bodywrap";
 
 	$email = $_GET['email'];
-	$suemail = isset($_GET['signup']);
+	$suemail = isset($_GET['signup']) ? 'true' : 'false';
 	
 	$phone = $_GET['phone'];
 	$ptype = $_GET['phonetype'];
@@ -50,16 +50,13 @@
 		$query = "INSERT INTO User VALUES (NULL, '$uname', '$upass', '$fname', '$mname', '$lname', CAST('$bday' AS DATE), '$theme_id', $pptos, true, NULL, NULL, NULL);";
 		$result = $connection->query($query);
 		
-		echo $connection->error;
-				
 		$query = "SELECT USER_ID FROM User WHERE username = '$uname';";
 		$result = $connection->query($query);
 		$count = mysqli_num_rows($result);
 		
 		$userid = ($result->fetch_assoc())['USER_ID'];
-		echo ("<script>alert('You Have Successfully Regisered Your Account!')</script>");
 		
-		$query = "INSERT INTO Email VALUES (NULL, $userid, '$email', $suemail)";
+		$query = "INSERT INTO Email VALUES (NULL, $userid, '$email', $suemail);";
 		$result = $connection->query($query);
 		
 		$query = "SELECT PHONETYPE_ID FROM PhoneType where phonetype='$ptype'";
@@ -71,6 +68,8 @@
 		
 		$query = "INSERT INTO Address VALUES (NULL, $userid, true, '$addr1', '$addr2', '$city', (SELECT state_id FROM State WHERE abbreviation = '$state'), '$zip', false)";
 		$result = $connection->query($query);
+		
+		echo ("<script>alert('You Have Successfully Regisered Your Account!')</script>");
 	}
 
 	$connection->close();
