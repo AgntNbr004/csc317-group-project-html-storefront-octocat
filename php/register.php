@@ -12,7 +12,7 @@
 			<form action="registersubmit.php" method="GET">
 				<center>
 					<thead>
-						<h1>Account Registration</h1>
+						<h1 class="herotx sub1 sub2 sub4">Account Registration</h1>
 					</thead>
 				</center>
 				<p>*=Required</p>

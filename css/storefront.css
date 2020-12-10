@@ -77,6 +77,10 @@ h1 b{
     background-image: linear-gradient(#92caff,#517fff)
 }
 
+.herotx.sub1.sub2.sub4{
+    background-image: url(../media/img/acctreg.jpg);
+}
+
 #productInfoBox{
     z-index: 1;
     opacity: 0;
