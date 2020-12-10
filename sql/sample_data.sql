@@ -1,4 +1,3 @@
---P
 USE Octocat;
 
 /* SAMPLE DATA: Giving a user to log in with */
@@ -519,4 +518,3 @@ values (NULL, 1, 4, 1, 2.99),
 
 select *
 from OrderDetails;
-

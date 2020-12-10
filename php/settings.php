@@ -22,7 +22,7 @@ if(isset($_SESSION["UserID"])) {
 		$cry = $row['cryengine'] ? 'checked' : '';
 	}	
 //selects data from Address table	
-	$queryAddress = "SELECT * FROM Address WHERE USER_ID = $id;";
+	$queryAddress = "SELECT * FROM Address WHERE USER_ID = $id ORDER BY principal DESC LIMIT 1;";
 	$resultAddress = $connection->query($queryAddress);
 	$countAddress = mysqli_num_rows($resultAddress);
 

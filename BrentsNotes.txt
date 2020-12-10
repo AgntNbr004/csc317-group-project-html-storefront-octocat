@@ -49,5 +49,7 @@ NICE-TO-HAVES:
 	    PHP + DATABASE
 	03. On Payment.php, move "Shopping Cart" and "Submit order" to a second column
 	    PHP
-	04. 
+	04. Create a confirmation popup for cancel account
+	    PHP
+	05. 
 

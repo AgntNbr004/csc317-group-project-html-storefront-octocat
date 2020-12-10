@@ -83,4 +83,3 @@ SELECT *
 FROM PhoneType;
 
 SELECT * FROM PhoneType;
-
