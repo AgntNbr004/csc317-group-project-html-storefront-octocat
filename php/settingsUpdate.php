@@ -78,7 +78,8 @@ function updateAccount() {
 		$resultStateUpdate = $connection->query($queryStateUpdate);
 
 	// Redirect
-		header("Location: settings.php");
+		echo '<script>alert("Account Info Updated")</script>';
+            	echo "<script>setTimeout(\"location.href = 'settings.php';\",500);</script>";
 	}
 
 	function cancelAccount() {
